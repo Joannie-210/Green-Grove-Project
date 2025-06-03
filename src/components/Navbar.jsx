@@ -42,14 +42,10 @@ const Navbar = () => {
          <li className="relative group">
       {/* Top nav link with chevron */}
       <div className="flex items-center gap-1 text-white cursor-pointer">
-        <NavLink
-          to="/about"
-          className={({ isActive }) =>
-            isActive ? 'text-green-500' : 'text-white'
-          }
+        <a
         >
           Products
-        </NavLink>
+        </a>
         <ChevronDown className="w-4 h-4 transition-transform duration-300 group-hover:rotate-180" />
       </div>
 
