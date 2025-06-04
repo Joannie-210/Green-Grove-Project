@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: "poppins";
+    src: url('assets/Poppins/Poppins-SemiBold.ttf');
+}
+
+h1 {
+    font-family: poppins;
+}
