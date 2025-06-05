@@ -9,6 +9,7 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [visitCount, setVisitCount] = useState(0);
+  const [productsOpen, setProductsOpen] = useState(false);
 
   useEffect(() => {
     const count = localStorage.getItem('visitCount');
@@ -28,7 +29,7 @@ const Navbar = () => {
   };
 useEffect(()=> {
   const handleScroll = () => {
-    const isBeyondScreen = window.scrollY > window.innerHeight - 200;
+    const isBeyondScreen = window.scrollY > window.innerHeight - 10;
     setScrolled(isBeyondScreen)
   }
   window.addEventListener('scroll', handleScroll);
@@ -38,8 +39,8 @@ useEffect(()=> {
 }, []);
 
   return (
-    <div className="w-full fixed top-0 left-0 z-50 flex justify-center items-center" style={{ height: '140px' }}>
-      <nav className={`w-full max-w-screen-xl px-4 py-2 flex items-center justify-between rounded-full transition-all duration-300 ease-in-out
+    <div className="w-full fixed top-0 left-0 z-50  flex justify-center items-center" style={{ height: '100px' }}>
+      <nav className={`w-full lg:w-300 max-w-screen-xl px-4 py-2 flex items-center justify-between rounded-full transition-all duration-300 ease-in-out
         ${scrolled ? 'bg-black/90 shadow-lg text-black' : 'bg-white/20 backdrop-blur-sm shadow-md text-green-500'}`}>
 
         {/* Logo */}
@@ -64,7 +65,7 @@ useEffect(()=> {
         <ul
          className={`
     md:flex md:static absolute top-full left-0 w-full md:w-auto 
-    bg-green-500 md:bg-transparent 
+    bg-black/80 md:bg-transparent 
     text-black sm:${scrolled ? 'text-black' : 'text-black'} 
     flex-col md:flex-row items-center lg:gap-15 gap-6 px-6 py-4 md:py-0 md:gap-8 
     transition-all duration-300 ease-in-out z-40 
@@ -82,9 +83,9 @@ useEffect(()=> {
       to={to}
       className={({ isActive }) =>
         isActive
-          ? 'text-green-500'
-          : scrolled
           ? 'text-white'
+          : scrolled
+          ? 'text-white hover:text-green-500 transition-colors'
           : 'text-white'
       }
     >
@@ -97,28 +98,56 @@ useEffect(()=> {
 
 
           {/* Dropdown */}
-          <li className="relative group">
-            <div className="flex items-center gap-1 text-white cursor-pointer relative">
-              <span className={`relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-500 after:transition-all after:duration-300 group-hover:after:w-full ${scrolled ? 'text-white' : 'text-white'}` }>
-                Products
-              </span>
-              <ChevronDown className={`w-4 h-4 group-hover:rotate-180 transition-transform duration-300 ${scrolled ? 'text-white' : 'text-white'}`} />
-            </div>
-            <ul className="absolute left-0 top-full mt-2 w-48 bg-white text-black rounded shadow-lg opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-y-1 z-50">
-              <li>
-                <NavLink to="/tools" className="block px-4 py-2 hover:bg-green-100">Gardening Tools</NavLink>
-              </li>
-              <li>
-                <NavLink to="/essential" className="block px-4 py-2 hover:bg-green-100">Gardening Essentials</NavLink>
-              </li>
-              <li>
-                <NavLink to="/accessory" className="block px-4 py-2 hover:bg-green-100">Accessories</NavLink>
-              </li>
-              <li>
-                <NavLink to="/article" className="block px-4 py-2 hover:bg-green-100">Related Articles</NavLink>
-              </li>
-            </ul>
-          </li>
+        <li className="relative group w-full md:w-auto">
+  <div
+    className="flex items-center justify-center w-full md:w-auto gap-1 text-white cursor-pointer"
+    onClick={() => {
+      // Only toggle on mobile
+      if (window.innerWidth < 768) {
+        setProductsOpen(!productsOpen);
+      }
+    }}
+  >
+    <span
+      className={`text-center relative after:abs  olute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-500 after:transition-all after:duration-300 group-hover:after:w-full ${
+        scrolled ? 'text-white' : 'text-white'
+      }`}
+    >
+      Products
+    </span>
+    <ChevronDown
+      className={`w-4 h-4 transition-transform duration-300 ${
+        productsOpen ? 'rotate-180' : ''
+      } group-hover:rotate-180`}
+    />
+  </div>
+
+  <ul
+    className={`
+      md:absolute md:left-0 md:top-full md:mt-2 md:w-48
+      bg-white text-black rounded shadow-lg z-50
+      transition-all duration-300 transform
+      overflow-hidden
+
+      ${productsOpen ? 'max-h-96 opacity-100 visible' : 'max-h-0 opacity-0 invisible'}
+      md:group-hover:max-h-96 md:group-hover:opacity-100 md:group-hover:visible md:group-hover:translate-y-1
+    `}
+  >
+    <li>
+      <NavLink to="/tools" className="block px-4 py-2 hover:bg-green-100">Gardening Tools</NavLink>
+    </li>
+    <li>
+      <NavLink to="/essential" className="block px-4 py-2 hover:bg-green-100">Gardening Essentials</NavLink>
+    </li>
+    <li>
+      <NavLink to="/accessory" className="block px-4 py-2 hover:bg-green-100">Accessories</NavLink>
+    </li>
+    <li>
+      <NavLink to="/article" className="block px-4 py-2 hover:bg-green-100">Related Articles</NavLink>
+    </li>
+  </ul>
+</li>
+
         </ul>
 
         {/* Buttons and Visit Count */}
@@ -128,7 +157,7 @@ useEffect(()=> {
         </div>
 
         <div className={`hidden md:flex flex-col items-end text-sm text-white ml-4 ${scrolled ? 'text-white' : 'text-white' }`}>
-          <span className='flex gap-1 first:items-center justify-center '><UserRound/>: {visitCount} {visitCount === 1 ? 'visit' : 'visits'}</span>
+          <span className='text-[11px] flex gap-1 first:items-center justify-center '><UserRound/>: {visitCount} {visitCount === 1 ? 'visit' : 'visits'}</span>
         </div>
       </nav>
     </div>

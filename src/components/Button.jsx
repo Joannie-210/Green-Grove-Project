@@ -6,8 +6,7 @@ const Button = ({ text, onClick, variant = "primary", disabled = false, icon: Ic
     const variants = {
       primary: "bg-green-600 w-auto px-2 h-10 text-white hover:opacity-70 transition duration-300 cursor-pointer",
       secondary: "w-auto px-2 h-10 bg-white text-black hover:text-white hover:bg-black transistion duration-300 cursor-pointer",
-      gold: " h-12 bg-white w-62 border-2 border-gray-500 rounded-full text-black hover:bg-gray-200  hover:text-black hover:border-none cursor-pointer ",
-      option: ' focus:text-black focus:border-black focus:border-3 hover:bg-gray-200 hover:text-black hover:border-none active:scale-95 h-14  mb-8 border-2 w-full border-purple-800 rounded-3xl flex items-center justify-start cursor-pointer ',
+      gold: " w-10 flex justify-center items-center h-10 bg-white text-black hover:text-white hover:bg-black transistion duration-300 cursor-pointer",
       build: "h-17 w-70 block mt-5 bg-purple-700 text-white text-xl hover:opacity-70 transition duration-300 cursor-pointer"
     };
   
@@ -17,7 +16,7 @@ const Button = ({ text, onClick, variant = "primary", disabled = false, icon: Ic
         onClick={onClick}
         disabled={disabled}
       >
-          {Icon && <Icon className="w-6 h-6" />}
+          {Icon && <Icon className="text-red-600" />}
         {text}
       </button>
     );

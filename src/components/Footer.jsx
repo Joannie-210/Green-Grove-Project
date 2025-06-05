@@ -5,7 +5,7 @@ import Logo from '../assets/grove.png'
 const Footer = () => {
   return (
      <>
-    <div className='bg-[#FAF3E0] pt-10 w-full h-100 '>
+    <div className='bg-[#FAF3E0] pt-10 w-full h-70 '>
       <img src={Foot} className='lg:max-w-4xl object-cover m-auto w-300 h-70 rounded-lg'/>
      <div></div>
   </div>
@@ -20,7 +20,7 @@ const Footer = () => {
        
         <img src={Logo} alt="Logo" className="mt-[-10px] h-40 w-40 object-contain"/>
       </div>
-      <p class="text-sm text-gray-600">© 2025 Your Company. All rights reserved.</p>
+      <p class="text-sm text-gray-600">© 2025 Green Grove. All rights reserved.</p>
     </div>
 
    
