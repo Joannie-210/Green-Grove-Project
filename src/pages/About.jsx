@@ -10,7 +10,6 @@ import earth from '../assets/earth-planet.png'
 import boy2 from '../assets/boy2.png'
 import girl from '../assets/girl1.png'
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import '@fontsource/jost';
 import CountUp from 'react-countup';
 import { geolocation } from './About';
@@ -30,87 +29,102 @@ const About = () => {
     });
   }
 
-  
 
-  // const [latitude, setLatitude] = React.useState('')
-  // const [longitude, setLongitude] = React.useState('')
-  // useEffect(() => {
-  //   navigator.geolocation.getCurrentPosition((position) => {
-  //     setLatitude(position.coords.latitude)
-  //     setLongitude(position.coords.longitude)
-  //   })
-  // }, [])
 
   return (
     <div>
 
-      <div
-        className="bg-cover bg-center h-[450px] bg-fixed flex items-center justify-center bg-gray-700 bg-blend-exclusion rounded-bl-[50px]"
-        style={{ backgroundImage: `url(${aboutus})` }}
-        data-aos="fade-up"
-      >
-        <div data-aos="fade-up" className="text-center">
-          <h1 className="text-white text-6xl font-bold">About Us</h1>
-        </div>
+      <div className="relative bg-cover bg-center bg-fixed flex items-center justify-center rounded-bl-[60px] sm:rounded-bl-[100px] h-[60vh] sm:h-[80vh] lg:h-screen"
+        style={{ backgroundImage: `url(${aboutus})` }} data-aos="fade-up"> 
+  <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/60 to-black/60 rounded-bl-[60px] sm:rounded-bl-[100px]"></div>
+  <div className="relative z-10 text-center px-4">
+    <h1 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold">About Us</h1>
+  </div>
+</div>
+
+
+  <div className="px-4 py-16 sm:px-8 md:px-12 lg:px-[50px] lg:py-[100px]">
+  <div className="grid grid-cols-1 lg:grid-cols-[300px_1fr_1fr] gap-10 lg:gap-[50px]">
+    
+    <div className="flex justify-center lg:block">
+      <img src={garden} className="h-[300px] sm:h-[400px] md:h-[500px] rounded-2xl object-cover" alt="Garden" />
+    </div>
+
+    
+    <div className="max-w-full" data-aos="fade-up">
+      <div className="pt-6 sm:pt-[30px] font-Jost text-center lg:text-left">
+        <h2 className="text-green-700 text-5xl sm:text-6xl lg:text-8xl font-bold">25</h2>
+        <p className="text-green-700 text-lg sm:text-xl pb-4">Years of Experience</p>
+        <h1 className="text-green-950 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black pb-4">
+          We Make Your Home Like A Garden
+        </h1>
+        <p className="text-base sm:text-lg">
+          With over two decades of expertise in eco-friendly landscaping, Green Groves transforms ordinary yards into
+          lush, vibrant gardens. We combine passion, and design to bring your vision to life—whether it’s your backyard,
+          rooftop, or community garden.
+        </p>
+      </div>
+    </div>
+
+    
+    <div className="pt-6 font-Jost text-center lg:text-left">
+      <div data-aos="fade-up" data-aos-delay="200" className="pb-8">
+        <i className="bi bi-award-fill text-green-700 text-5xl sm:text-[55px]"></i>
+        <h2 className="font-semibold text-green-950 text-lg sm:text-xl mt-2">Award Winning</h2>
+        <p className="text-base sm:text-lg">
+          Recognized nationally for our sustainable designs and exceptional client service.
+        </p>
+      </div>
+      <div data-aos="fade-up" data-aos-delay="300">
+        <i className="bi bi-people-fill text-green-700 text-5xl sm:text-[55px] mt-5"></i>
+        <h2 className="font-semibold text-green-950 text-lg sm:text-xl mt-2">Dedicated Team</h2>
+        <p className="text-base sm:text-lg">
+          Certified horticulturists and designers who love what they do.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <div className="bg-cover bg-center bg-fixed bg-blend-exclusion relative"
+    style={{ backgroundImage: `url(${aboutus})` }}>
+  <div className="absolute inset-0 bg-gradient-to-br from-black/55 via-black/55 to-black/55 bg-opacity-60"></div>
+
+  <div className="relative z-10 px-6 py-12 sm:px-10 md:px-[80px] lg:px-[120px]">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center">
+
+      <div className="flex flex-col items-center" data-aos="fade-up">
+        <p className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white">
+          <CountUp end={100} duration={9} delay={1} />+
+        </p>
+        <p className="font-Jost text-lg sm:text-xl font-bold text-white">Happy Clients</p>
       </div>
 
-
-      <div className='p-[50px] pt-[100px] pb-[100px]'>
-        <div className='grid grid-cols-[300px_1fr_1fr] gap-[50px]'>
-          <div>
-          <img src={garden} className='h-[500px] rounded-2xl'/>
-        </div>
-
-        <div className='w-[500px]' data-aos="fade-up">
-          <div className='pt-[50px] font-Jost'>
-          <h2 className='text-green-700 text-8xl  font-bold'>25</h2>
-          <p className='text-green-700 text-xl pb-[30px]'>Years of Experience</p>
-          <div>
-            <h1 className='text-green-950 text-5xl font-[900] pb-[30px]'>We Make Your Home Like A Garden</h1>
-            <p className='text-[18px]'>With over two decades of expertise in eco-friendly landscaping, Green Groves transforms ordinary yards into lush, vibrant gardens. We combine passion, and design to bring your vision to life, whether it’s your backyard, rooftop, or community garden.</p>
-          </div>
-        </div>
-        </div>
-
-
-        <div className='pt-[50px] font-Jost'>
-          <div data-aos="fade-up" data-aos-delay="200" className='pb-[30px]'>
-            <i class="bi bi-award-fill text-green-700 text-[55px]"></i>
-            <h2 className='font-semibold text-green-950 text-[20px]'>Award Winning</h2>
-            <p className='text-xl'>Recognized nationally for our sustainable designs and exceptional client service.</p>
-          </div>
-          <div data-aos="fade-up" data-aos-delay="200" className=''>
-            <i class="bi bi-people-fill text-green-700 text-[55px] mt-5"></i>
-            <h2 className='font-semibold text-green-950 text-[20px]'>Dedicated Team</h2>
-            <p className='text-xl'>Certified horticulturists and designers who love what they do.</p>
-          </div>
-        </div>
-        </div>
+      <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="100">
+        <p className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white">
+          <CountUp end={1000} duration={5} delay={1} />+
+        </p>
+        <p className="font-Jost text-lg sm:text-xl font-bold text-white">Gardens Completed</p>
       </div>
 
+      <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="150">
+        <p className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white">
+          <CountUp end={100} duration={9} delay={1} />+
+        </p>
+        <p className="font-Jost text-lg sm:text-xl font-bold text-white">Dedicated Staff</p>
+      </div>
 
+      <div className="flex flex-col items-center" data-aos="fade-up" data-aos-delay="200">
+        <p className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white">
+          <CountUp end={1000} duration={5} delay={1} />+
+        </p>
+        <p className="font-Jost text-lg sm:text-xl font-bold text-white">Awards Received</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-    <div className="bg-cover bg-center bg-fixed bg-gray-700 bg-blend-exclusion"
-        style={{ backgroundImage: `url(${aboutus})` }}>
-      <div className='p-[60px] pl-[120px] h-[250px] pr-[120px] flex items-center justify-between'>
-       <div className='flex items-center flex-col ' data-aos="fade-up">
-        <p className='text-6xl font-extrabold text-white'><CountUp end={100} duration={9} delay ={1} />+</p>
-        <p className='font-Jost text-2xl font-bold text-white'>Happy Clients</p>
-       </div>
-       <div className='flex items-center flex-col' data-aos="fade-up" data-aos-delay="100">
-        <p className='text-6xl font-extrabold text-white'><CountUp end={1000} duration={5} delay ={1} />+</p>
-        <p className='font-Jost text-2xl font-bold text-white'>Garden's Completed</p>
-       </div>
-       <div className='flex items-center flex-col' data-aos="fade-up" data-aos-delay="150">
-        <p className='text-6xl font-extrabold text-white'><CountUp end={100} duration={9} delay ={1} />+</p>
-        <p className='font-Jost text-2xl font-bold text-white'>Dedicated Staff</p>
-       </div>
-       <div className='flex items-center flex-col' data-aos="fade-up" data-aos-delay="200">
-        <p className='text-6xl font-extrabold text-white'><CountUp end={1000} duration={5} delay ={1} />+</p>
-        <p className='font-Jost text-2xl font-bold text-white'>Award's Recieved</p>
-       </div>
-    </div>
-    </div>
     
     <div className="px-15 py-20  text-gray-800">
   <div className="max-w-6xl mx-auto">
@@ -164,80 +178,60 @@ const About = () => {
   </div>
 </div>
 
-    <div className='pt-[80px] pb-[80px] p-[60px]'>
-      <div className='text-center flex justify-center items-center flex-col gap-4'>
-        <p className='text-green-700 font-bold text-3xl'>Our Team</p>
-        <h2 className='text-green-950 font-Jost font-extrabold text-5xl w-[400px] pb-[70px]' data-aos="fade-up">Dedicated & Experienced Team Members</h2>
-      </div>
 
-      <div className='grid grid-cols-[1fr_1fr_1fr] gap-5'>
 
-        <div className='bg-gray-700 w-fit h-fit  rounded-md group relative' data-aos="fade-up">
-          <div className="bg-cover h-[400px] w-[300px] bg-center bg-gray-700 hover:cursor-pointer rounded-md"
-        style={{ backgroundImage: `url(${boy})` }}></div>
-        <div className='flex flex-col justify-center bg-white h-[150px] pl-3 w-[250px] bottom-20 left-0 absolute opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out transform -translate-x-10 group-hover:translate-x-0 rounded-br-md rounded-tr-md'>
-          <p className='font-semibold text-xl'>Gerard myGuy</p>
-          <p className='text-green-700'>Garden Designer</p>
-          <div className='flex gap-4'>
-            <div className="bg-green-200 w-[40px] h-[40px] rounded-full flex items-center justify-center">
-            <a href="#" className="text-green-700 text-[20px]"><i className="bi bi-facebook"></i></a>
-          </div>
-            <div className="bg-green-200 w-[40px] h-[40px] rounded-full flex items-center justify-center">
-              <a href="" className='text-green-700 text-[20px]'><i class="bi bi-twitter-x"></i></a>
-            </div>
-            <div className="bg-green-200 w-[40px] h-[40px] rounded-full flex items-center justify-center">
-              <a href="" className='text-green-700'><i class="bi bi-instagram"></i></a>
-            </div>
-          </div>
-        </div>
-        </div>
+   <div className="pt-20 pb-20 px-6 sm:px-10 lg:px-[60px]">
+  {/* Heading */}
+  <div className="text-center flex flex-col gap-4 items-center">
+    <p className="text-green-700 font-bold text-2xl sm:text-3xl">Our Team</p>
+    <h2
+      className="text-green-950 font-Jost font-extrabold text-3xl sm:text-4xl md:text-5xl text-center max-w-xl"
+      data-aos="fade-up"
+    >
+      Dedicated & Experienced Team Members
+    </h2>
+  </div>
 
-        
-          <div className='bg-gray-700 w-fit h-fit  rounded-md group relative' data-aos="fade-up" data-aos-delay="150">
-          <div className="bg-cover h-[400px] w-[300px] bg-center bg-gray-700 hover:cursor-pointer rounded-md"
-        style={{ backgroundImage: `url(${boy2})` }}></div>
-        <div className='flex flex-col justify-center bg-white h-[150px] pl-3 w-[250px] bottom-20 left-0 absolute opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out transform -translate-x-10 group-hover:translate-x-0 rounded-br-md rounded-tr-md'>
-          <p className='font-semibold text-xl'>Gaadi Tartor</p>
-          <p className='text-green-700'>Garden Designer</p>
-          <div className='flex gap-4'>
-            <div className="bg-green-200 w-[40px] h-[40px] rounded-full flex items-center justify-center">
-            <a href="#" className="text-green-700 text-[20px]"><i className="bi bi-facebook"></i></a>
-          </div>
-            <div className="bg-green-200 w-[40px] h-[40px] rounded-full flex items-center justify-center">
-              <a href="" className='text-green-700 text-[20px]'><i class="bi bi-twitter-x"></i></a>
-            </div>
-            <div className="bg-green-200 w-[40px] h-[40px] rounded-full flex items-center justify-center">
-              <a href="" className='text-green-700'><i class="bi bi-instagram"></i></a>
-            </div>
-          </div>
-        </div>
-        
-        </div>
+  {/* Team Grid */}
+  <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    {/* Team Member Card */}
+    {[ 
+      { img: boy, name: "Gerard myGuy", delay: "0" },
+      { img: boy2, name: "Gaadi Tartor", delay: "150" },
+      { img: girl, name: "Joanna Enoch", delay: "200" }
+    ].map((member, index) => (
+      <div
+        key={index}
+        className="relative group rounded-md w-full max-w-[320px] mx-auto"
+        data-aos="fade-up"
+        data-aos-delay={member.delay}
+      >
+        <div
+          className="bg-cover bg-center h-[450px] w-full rounded-md bg-gray-700"
+          style={{ backgroundImage: `url(${member.img})` }}
+        ></div>
 
-        
-          <div className='bg-gray-700 w-fit h-fit  rounded-md group relative' data-aos="fade-up" data-aos-delay="200">
-          <div className="bg-cover h-[400px] w-[300px] bg-center bg-gray-700 hover:cursor-pointer rounded-md"
-        style={{ backgroundImage: `url(${girl})` }}></div>
-        <div className='flex flex-col justify-center bg-white h-[150px] pl-3 w-[250px] bottom-20 left-0 absolute opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out transform -translate-x-10 group-hover:translate-x-0 rounded-br-md rounded-tr-md'>
-          <p className='font-semibold text-xl'>Joanna Enoch</p>
-          <p className='text-green-700'>Garden Designer</p>
-          <div className='flex gap-4'>
-            <div className="bg-green-200 w-[40px] h-[40px] rounded-full flex items-center justify-center">
-            <a href="#" className="text-green-700 text-[20px]"><i className="bi bi-facebook"></i></a>
+        <div className="absolute bottom-20 left-0 w-[85%] sm:w-[250px] bg-white rounded-tr-md rounded-br-md p-3 opacity-0 group-hover:opacity-100 transform -translate-x-10 group-hover:translate-x-0 transition duration-300 ease-in-out">
+          <p className="font-semibold text-xl">{member.name}</p>
+          <p className="text-green-700">Garden Designer</p>
+          <div className="flex gap-3 mt-3">
+            {["facebook", "twitter-x", "instagram"].map((icon, i) => (
+              <div
+                key={i}
+                className="bg-green-200 w-10 h-10 rounded-full flex items-center justify-center"
+              >
+                <a href="#" className="text-green-700 text-xl">
+                  <i className={`bi bi-${icon}`}></i>
+                </a>
+              </div>
+            ))}
           </div>
-            <div className="bg-green-200 w-[40px] h-[40px] rounded-full flex items-center justify-center">
-              <a href="" className='text-green-700 text-[20px]'><i class="bi bi-twitter-x"></i></a>
-            </div>
-            <div className="bg-green-200 w-[40px] h-[40px] rounded-full flex items-center justify-center">
-              <a href="" className='text-green-700'><i class="bi bi-instagram"></i></a>
-            </div>
-          </div>
-        
-        </div>
         </div>
       </div>
+    ))}
+  </div>
+</div>
 
-    </div>
 
      <button onClick={scrollToTop} className="fixed bottom-10 right-10 bg-green-700 text-white p-3 rounded-full shadow-lg hover:bg-green-800 transition duration-300 w-[50px] h-[50px] flex items-center justify-center hover:cursor-pointer">
       <i className="bi bi-arrow-up text-xl"></i>
@@ -248,7 +242,7 @@ const About = () => {
 
      
     <div className='flex items-center justify-center flex-col gap-4 pt-[50px] pb-[50px]'>
-      <button onClick={geolocation} className='bg-green-600 p-5 rounded-xl font-Jost text-white text-xl hover:cursor-pointer'>Find My Location</button>
+      <button onClick={geolocation} className='bg-green-600 p-5 rounded-full font-Jost font-bold text-white text-xl hover:cursor-pointer hover:bg-green-800'>Find My Location</button>
     <div style={{ display: 'none' }} className='popup'>
       <a href='#' className='popup-link'>Click here</a>
     </div>
