@@ -45,10 +45,10 @@ const Contact = () => {
       </div>
 
       {/* Form Section */}
-    <div className="flex flex-col lg:flex-row justify-between items-center gap-10 min-w-full h-auto py-5 px-4 sm:px-10">
+    <div className="lg:h-200 flex flex-col lg:flex-row justify-between lg:pt-15  items-start gap-10 min-w-full h-auto py-5 px-4 sm:px-10">
   {/* Contact Info Section */}
-  <div className="hidden md:flex flex-col justify-center w-full max-w-xl rounded-lg">
-    <h1 className="text-2xl bgw-full md:text-6xl lg:text-5xl font-bold mb-4">Drop the line, let's chat</h1>
+  <div className="hidden md:flex flex-col justify-start  w-150 max-w-xl rounded-lg">
+    <h1 className="text-2xl bgw-full md:text-6xl lg:text-5xl font-bold mt-5 mb-4">Drop the line, let's chat</h1>
     <h2 className="text-xl mb-6">Don't hesitate to say a hello!</h2>
 
     <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
@@ -78,45 +78,48 @@ const Contact = () => {
   </div>
 
   {/* Contact Form Section */}
-  <div className="w-full max-w-2xl bg-green-200 rounded-xl py-6 px-4 sm:px-8 border-2 border-black">
-    <h2 className="text-center font-Jost text-black text-3xl sm:text-4xl mb-6">Contact Us</h2>
-    <form onSubmit={onSubmit} className="flex flex-col gap-4">
-      <input
-        type="text"
-        name="name"
-        placeholder="Name"
-        className="bg-white p-4 rounded-lg w-full border-2 border-black"
-        required
-      />
-      <input
-        type="text"
-        name="phone"
-        placeholder="Phone Number"
-        className="bg-white p-4 rounded-lg w-full border-2 border-black"
-        required
-      />
-      <input
-        type="email"
-        name="email"
-        placeholder="Email"
-        className="bg-white p-4 rounded-lg w-full border-2 border-black"
-        required
-      />
-      <textarea
-        name="message"
-        placeholder="Message"
-        rows="5"
-        className="bg-white p-4 rounded-lg w-full border-2 border-black"
-        required
-      ></textarea>
-      <button
-        type="submit"
-        className="w-full p-4 rounded-full bg-green-600 hover:bg-green-700 text-white font-bold border-2 border-black transition-colors hover:border-white"
-      >
-        Submit Form
-      </button>
-    </form>
-  </div>
+  <div className="w-full max-w-lg mx-auto bg-white rounded-2xl py-6 lg:px-1 sm:p-10 shadow-lg border border-gray-200">
+  <h2 className="text-center font-sans text-gray-800 text-3xl sm:text-4xl font-semibold mb-6">
+      Contact Us
+  </h2>
+  <form onSubmit={onSubmit} className="flex flex-col gap-5">
+    <input
+      type="text"
+      name="name"
+      placeholder="Your Full Name"
+      className="w-full py-3 px-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600 transition-all duration-200 placeholder-gray-500"
+      required
+    />
+    <input
+      type="text"
+      name="phone"
+      placeholder="Phone Number"
+      className="w-full py-3 px-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600 transition-all duration-200 placeholder-gray-500"
+      required
+    />
+    <input
+      type="email"
+      name="email"
+      placeholder="Email Address"
+      className="w-full py-3 px-4 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600 transition-all duration-200 placeholder-gray-500"
+      required
+    />
+    <textarea
+      name="message"
+      placeholder="Type your message here..."
+      rows="5"
+      className="w-full py-3 px-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-green-600 transition-all duration-200 placeholder-gray-500"
+      required
+    ></textarea>
+    <button
+      type="submit"
+      className="w-full py-3 rounded-full bg-green-500 cursor-pointer hover:bg-green-600 text-white font-medium text-lg shadow-sm transition-all duration-200"
+    >
+      Send Message
+    </button>
+  </form>
+</div>
+
 </div>
 
     </div>
