@@ -11,6 +11,10 @@
     src: url('assets/Jost/Jost-VariableFont_wght.ttf');
 }
 
+form{
+    padding: 40px;
+}
+
 @theme{
     --font-Jost: Jost, sans-serif;
 }
