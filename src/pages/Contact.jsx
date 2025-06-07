@@ -47,11 +47,11 @@ const Contact = () => {
       {/* Form Section */}
     <div className="lg:h-200 flex flex-col lg:flex-row justify-between lg:pt-15  items-start gap-10 min-w-full h-auto py-5 px-4 sm:px-10">
   {/* Contact Info Section */}
-  <div className="hidden md:flex flex-col justify-start  w-150 max-w-xl rounded-lg">
-    <h1 className="text-2xl bgw-full md:text-6xl lg:text-5xl font-bold mt-5 mb-4">Drop the line, let's chat</h1>
+  <div className="hidden md:flex flex-col justify-start md:w-full  w-150 max-w-4xl rounded-lg">
+<h1 className="text-2xl w-full md:text-6xl  md:text-center lg:text-5xl  lg:text-left font-bold mt-5 mb-4">Drop the line, let's chat</h1>
     <h2 className="text-xl mb-6">Don't hesitate to say a hello!</h2>
 
-    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+    <div className="flex flex-col  items-center md:justify-between  md:flex-row lg:items-center lg:justify-between gap-6">
       <div className="flex flex-col text-black">
         <div className="mb-4">
           <h4 className="text-lg font-semibold">Phone</h4>
@@ -113,7 +113,7 @@ const Contact = () => {
     ></textarea>
     <button
       type="submit"
-      className="w-full py-3 rounded-full bg-green-500 cursor-pointer hover:bg-green-600 text-white font-medium text-lg shadow-sm transition-all duration-200"
+      className="active:scale-90 w-full py-3 rounded-full bg-green-500 cursor-pointer hover:bg-green-600 text-white font-medium text-lg shadow-sm transition-all duration-200"
     >
       Send Message
     </button>

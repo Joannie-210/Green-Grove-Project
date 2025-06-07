@@ -7,11 +7,11 @@ import Back from '../assets/back.jpeg';
 const HeroSection = () => {
   return (
     <div
-      className="relative w-full min-h-screen bg-fixed bg-center bg-no-repeat bg-cover flex items-center justify-center"
+      className="relative border w-full min-h-screen bg-fixed bg-center bg-no-repeat bg-cover flex items-center justify-center"
       style={{ backgroundImage: `url(${Back})` }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/70"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
 
       {/* Content */}
       <div className="relative z-10 lg:mt-10 w-full px-4 sm:px-8 md:px-12 lg:px-24 text-white text-left max-w-7xl mx-auto py-20">

@@ -78,15 +78,15 @@ useEffect(()=> {
   { to: '/videos', label: 'Videos' },
   { to: '/contact', label: 'Contact' },
 ].map(({ to, label }) => (
-  <li key={to} className="relative group">
+  <li key={to} className="relative group  hover:text-green-500">
     <NavLink
       to={to}
       className={({ isActive }) =>
         isActive
-          ? 'text-white'
+          ? 'text-green-500 hover:text-green-500 transition-colors'
           : scrolled
-          ? 'text-white hover:text-green-500 transition-colors'
-          : 'text-white'
+          ? 'text-white transition-colors'
+          : 'text-white  hover:text-green-500 transition-colors'
       }
     >
       <p className="relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-500 after:transition-all after:duration-300 group-hover:after:w-full">
@@ -102,16 +102,16 @@ useEffect(()=> {
   <div
     className="flex items-center justify-center w-full md:w-auto gap-1 text-white cursor-pointer"
     onClick={() => {
-      // Only toggle on mobile
+      
       if (window.innerWidth < 768) {
         setProductsOpen(!productsOpen);
       }
     }}
   >
     <span
-      className={`text-center relative after:abs  olute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-500 after:transition-all after:duration-300 group-hover:after:w-full ${
+      className={`text-center hover:text-green-500 relative after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 after:bg-green-500 after:transition-all after:duration-300 group-hover:after:w-full ${
         scrolled ? 'text-white' : 'text-white'
-      }`}
+      }` }
     >
       Products
     </span>
