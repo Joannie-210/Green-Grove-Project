@@ -233,7 +233,7 @@ const About = () => {
 </div>
 
 
-     <button onClick={scrollToTop} className="fixed bottom-10 right-10 bg-green-700 text-white p-3 rounded-full shadow-lg hover:bg-green-800 transition duration-300 w-[50px] h-[50px] flex items-center justify-center hover:cursor-pointer">
+     <button onClick={scrollToTop} className="fixed bottom-10 right-10 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition duration-300 w-[50px] h-[50px] flex items-center justify-center hover:cursor-pointer">
       <i className="bi bi-arrow-up text-xl"></i>
 
      </button>
@@ -241,8 +241,8 @@ const About = () => {
 
 
      
-    <div className='flex items-center justify-center flex-col gap-4 pt-[50px] pb-[50px]'>
-      <button onClick={geolocation} className='bg-green-600 p-5 rounded-full font-Jost font-bold text-white text-xl hover:cursor-pointer hover:bg-green-800'>Find My Location</button>
+    <div className='flex items-center justify-center flex-col gap-4 pt-[3px] pb-[100px]'>
+      <button onClick={geolocation} className='bg-green-600 px-6 py-4 rounded-full font-Jost font-bold text-white text-lg hover:cursor-pointer hover:opacity-80'>Find My Location</button>
     <div style={{ display: 'none' }} className='popup'>
       <a href='#' className='popup-link'>Click here</a>
     </div>
