@@ -197,8 +197,9 @@ const About = () => {
     {/* Team Member Card */}
     {[ 
       { img: boy, name: "Gerard myGuy", delay: "0" },
-      { img: boy2, name: "Gaadi Tartor", delay: "150" },
-      { img: girl, name: "Joanna Enoch", delay: "200" }
+      { img: girl, name: "Joanna Enoch", delay: "150" },
+      { img: boy2, name: "Gaadi Tartor", delay: "200" },
+      
     ].map((member, index) => (
       <div
         key={index}

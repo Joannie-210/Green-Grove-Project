@@ -12,8 +12,8 @@ import Tips from './pages/Tips.jsx'
 import Accessory from './pages/Accessory.jsx'
 import Video from './pages/Video.jsx'
 import Footer from './components/Footer.jsx'
-
-
+import Recs from './pages/Recs.jsx'
+import Ticker from './components/Ticker.jsx'
 import './App.css'
 
 function App() {
@@ -33,9 +33,12 @@ function App() {
        <Route path="/tools" element={<Tools />} />
          <Route path="/contact" element={<Contact />} />
            <Route path="/article" element={<Article />} />
+             <Route path="/recommendations" element={<Recs/>} />
       </Routes>
     </Router>
+      <Ticker/>
     <Footer/>
+
     </>
   )
 }
