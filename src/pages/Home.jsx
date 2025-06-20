@@ -20,7 +20,6 @@ import Sf from '../assets/sf.jpg';
 import Seeds from '../assets/seeds.jpg';
 import Pest from '../assets/pest.jpg';
 import Toys from '../assets/gardentoys.jpg'
-import Pebs from '../assets/pebbles.jpeg';
 import Hang from '../assets/hang.jpeg';
 import Stand from '../assets/stand.jpeg';
 import Brook from '../assets/brook.jpeg';
@@ -30,10 +29,6 @@ import Pack from '../assets/Pack.jpeg';
 import Comp from '../assets/comp.jpeg';
 import Can from '../assets/Can.jpeg';
 import Idea from '../assets/idea.jpeg';
-import Book from '../assets/bookone.jpg'
-import Books from '../assets/booktwo.jpeg'
-import Bookss from '../assets/bookthree.jpg'
-import Booksss from '../assets/bookfour.jpg'
 
 
 
@@ -300,7 +295,7 @@ const Home = () => {
   <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24">
     <div className="flex flex-col items-center mb-14"  >
     <h2 className="text-4xl md:text-5xl font-bold text-green-700 mb-4 text-center">
-      Gardening Techniques & Tips
+      Gardening Tips
     </h2>
     <p className="text-gray-600 text-center max-w-2xl">
       Get a quick glance at practical guides, handy tools, and simple hacks to upgrade your garden game.
