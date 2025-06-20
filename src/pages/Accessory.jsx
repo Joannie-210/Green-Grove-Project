@@ -3,7 +3,6 @@ import Acc from '../assets/accbg.jpg'
 import Main from '../assets/mainaccbg.jpg'
 import Fairy from '../assets/fairy.jpg'
 import Gnome from '../assets/Gnome.jpeg'
-import Peb from '../assets/Pebbles.jpeg'
 import Bam from '../assets/stick.jpeg'
 import Hang from '../assets/hanger.jpeg'
 import string from '../assets/string.jpeg'
@@ -33,13 +32,7 @@ const allAccessories = [
     image: Gnome,
     desc: 'Hand‑painted resin gnome that brings personality (and a little mischief) to any bed.',
   },
-  {
-    id: 3,
-    category: 'decor',
-    name: 'Water Pebbles',
-    image: Peb,
-    desc: 'Natural, high‑gloss stones perfect for top‑dressing potted plants or accent paths.',
-  },
+ 
   {
     id: 4,
     category: 'tags',
