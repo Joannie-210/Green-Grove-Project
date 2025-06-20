@@ -1,14 +1,9 @@
 import React from 'react'
 import HeroSection from '../components/HeroSection'
+import {Link} from 'react-router-dom'
 import {Quote} from 'lucide-react'
 import AOS from 'aos'
 import '@fontsource/jost';
-import {
-  BookOpen as BookOpenIcon, Globe as GlobeIcon,
-  Hammer as HammerIcon,
-  Bolt as BoltIcon,
-  Users as UsersIcon,
-} from 'lucide-react';
 import { useState } from 'react';
 import Herb from '../assets/balconyherb.jpeg';
 import Compost from '../assets/compost.jpg';
@@ -337,17 +332,17 @@ const Home = () => {
   </div>
 
   <div className="text-center" >
-    <a
-      href="/techniques"
+    <Link
+      to ="/tips"
       className="inline-block px-6 py-3 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors font-medium"
     >
       Explore Techniques →
-    </a>
+    </Link>
   </div>
   </div>
 </section>
 
-{/* ───────────────── Featured Gardening Tools ───────────────── */}
+
 <section className="w-full bg-gray-50 py-20">
   <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24">
    <div className="text-center mb-14" >
@@ -357,7 +352,7 @@ const Home = () => {
     </p>
   </div>
 
-  {/* Grid or carousel of tools */}
+ 
   <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
     {[
       {
@@ -409,7 +404,7 @@ const Home = () => {
   <div className="mt-12 text-center">
     <a
       href="/tools"
-      className="inline-block px-6 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors font-medium"
+      className="inline-block px-6 py-3 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors font-medium"
     >
       See All Tools →
     </a>
@@ -417,7 +412,7 @@ const Home = () => {
   </div>
 </section>
 
-{/* ───────────────── Gardening Essentials ───────────────── */}
+
 <section className="w-full bg-white py-20">
   <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24">
     {/* Heading */}
@@ -430,7 +425,7 @@ const Home = () => {
       </p>
     </div>
 
-    {/* Tabs */}
+    
     <div className="flex flex-wrap justify-center gap-4 mb-4">
       {Object.keys(essentials).map((tab) => (
         <button
@@ -438,7 +433,7 @@ const Home = () => {
           onClick={() => setActiveTab(tab)}
           className={`px-5 py-2 rounded-full border text-sm font-medium transition-all ${
             activeTab === tab
-              ? 'bg-green-600 text-white border-green-600'
+              ? 'bg-green-500 text-white border-green-600'
               : 'bg-white text-green-600 border-green-300 hover:bg-green-50'
           }`}
         >
@@ -455,16 +450,16 @@ const Home = () => {
       <img
         src={current.icon}
         alt={current.title}
-        className="w-32 h-32 object-cover border-4 border-green-700 rounded-full"
+        className="w-32 h-32 object-cover border-4 border-green-500 rounded-full"
       />
       <div className="text-center md:text-left">
-        <h3 className="text-2xl font-semibold text-green-700 mb-3">
+        <h3 className="text-2xl font-semibold text-green-500 mb-3">
           {current.title}
         </h3>
         <p className="text-gray-600 mb-5">{current.desc}</p>
         <a
           href={current.link}
-          className="inline-block px-5 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors"
+          className="inline-block px-5 py-2 bg-green-500 text-white rounded-full hover:bg-green-700 transition-colors"
         >
           View Details →
         </a>
@@ -482,11 +477,11 @@ const Home = () => {
         <p className="text-gray-50">Find the perfect home for your plants.</p>
       </div>
 
-      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" >
+      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" >
         {pots.map((pot, index) => (
           <div
             key={index}
-            className="relative group cursor-pointer w-full h-85 md:w-50 md:h-50 shadow-md hover:shadow-xl transition-shadow bg-white rounded-full overflow-hidden"
+            className="relative group cursor-pointer w-auto h-full md:w-50 md:h-50 shadow-md hover:shadow-xl transition-shadow bg-white rounded-full overflow-hidden"
           >
             <img
               src={pot.image}
@@ -504,21 +499,21 @@ const Home = () => {
       </div>
 
       <div className="mt-12 text-center" >
-        <a
-          href="/"
-          className="inline-block px-6 py-4 bg-white text-green-500 rounded-full hover:shadow-lg hover:bg-black transition-colors"
+        <Link
+          to ="/pots"
+          className="inline-block px-6 py-4 bg-white text-green-500 rounded-full hover:translate-y-[-2.5px] hover:shadow-lg transition-colors"
         >
           Read: Choosing the Right Container →
-        </a>
+        </Link>
       </div>
       </div>
 </section>
 
-{/* ───────────────── Accessories & Decoration Ideas ───────────────── */}
+
 <section className="w-full bg-white py-20">
   <div className="max-w-7xl mx-auto md:px-16 lg:px-24">
    <div className="text-center mb-12" >
-        <h2 className="text-4xl font-bold text-green-800 mb-3">Accessories & Decoration Ideas</h2>
+        <h2 className="text-3xl font-bold text-green-800 mb-3">Accessories & Decoration Ideas</h2>
         <p className="text-gray-600">Elevate your garden space with thoughtful, aesthetic touches.</p>
       </div>
 
@@ -543,25 +538,24 @@ const Home = () => {
       </div>
 
       <div className="mt-12 text-center" data-aos="fade-up">
-        <a
-          href="/aesthetics"
-          className="inline-block px-6 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors"
+        <Link
+          href="/accessory"
+          className="inline-block px-6 py-3 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors"
         >
           More Garden Aesthetics →
-        </a>
+        </Link>
       </div>
       </div>
 </section>
 
-{/* ───────────────── Product Recommendations ───────────────── */}
 <section className="w-full bg-gray-50 py-20">
   <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24">
-    {/* Header */}
-    <h2 className="text-2xl font-bold text-center text-green-800 mb-2">Product Recommendations</h2>
-    <p className="text-gray-600 text-center">Carefully curated picks to help your garden thrive.</p>
+
+    <h2 className="text-3xl md:text-4xl mb-4 font-bold text-center text-green-800">Product Recommendations</h2>
+    <p className="text-gray-600 text-center mb-5">Carefully curated picks to help your garden thrive.</p>
   </div>
 
-  {/* Filter Buttons */}
+  
   <div className="flex justify-center gap-4 mb-10">
     {['All', 'Tools', 'Accessories', 'Books'].map((cat) => (
       <button
@@ -569,7 +563,7 @@ const Home = () => {
         onClick={() => setFilter(cat)}
         className={`px-3 py-2 rounded-full text-sm font-medium transition-colors ${
           filter === cat
-            ? 'bg-green-600 text-white'
+            ? 'bg-green-500 text-white'
             : 'bg-white text-green-700 border border-green-400 hover:bg-green-100'
         }`}
       >
@@ -578,9 +572,9 @@ const Home = () => {
     ))}
   </div>
 
-  {/* Masonry Product Grid */}
+  
   <div
-    className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[auto] md:auto-rows-[300px]"
+    className="grid px-6 grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[auto] md:auto-rows-[300px]"
     
   >
     {filteredProducts.map((product, i) => (
@@ -604,27 +598,21 @@ const Home = () => {
     ))}
   </div>
 
-  {/* CTA Button */}
+
   <div className="text-center mt-14" >
-    <a
-      href="/recommendations"
-      className="inline-block px-6 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors"
+    <Link
+      to ="/recommendations"
+      className="inline-block px-6 py-3 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors"
     >
       See More Recommendations →
-    </a>
+    </Link>
   </div>
 </section>
 
-
-{/* ───────────────── Educational Media ───────────────── */}
-
-
-
-{/* ───────────────── About & Contact ───────────────── */}
 <section className="w-full bg-gray-50 py-20">
   <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-28">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-    {/* --- About Us Snippet --- */}
+
     <div>
       <h2 className="text-3xl font-bold text-green-800 mb-4">About Us</h2>
       <p className="text-gray-700 text-lg mb-4">
@@ -633,31 +621,26 @@ const Home = () => {
       </p>
       <a
         href="/about"
-        className="inline-block text-green-600 font-medium hover:underline transition-all"
+        className="inline-block text-green-500 font-medium hover:underline transition-all"
       >
         Read More →
       </a>
     </div>
 
-    {/* --- Contact Info & Map --- */}
     <div>
       <h2 className="text-3xl font-bold text-green-800 mb-4">Contact Us</h2>
       <div className="text-gray-700 space-y-2 mb-6">
-        <p><strong>Email:</strong> hello@greengroves.com</p>
+        <p><strong>Email:</strong> greengroves@gmail.com</p>
         <p><strong>Phone:</strong> +234 800 000 0000</p>
       </div>
 
-      {/* Google Maps Embed */}
-      <div className="w-full h-60 rounded-lg overflow-hidden shadow-md mb-6">
-       
-      </div>
 
-      <a
-        href="/contact"
-        className="inline-block px-6 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors"
+      <Link
+        to ="/contact"
+        className="inline-block px-6 py-3 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors"
       >
         Contact Us
-      </a>
+      </Link>
     </div>
   </div>
   </div>

@@ -7,7 +7,7 @@ const Footer = () => {
      <>
     <div className='bg-[#FAF3E0] pt-10 w-full h-70 '>
       <img src={Foot} className='lg:max-w-4xl object-cover m-auto w-300 h-70 rounded-lg'/>
-     <div></div>
+     
   </div>
    
     <div className="bg-[#FAF3E0] bg pt-10 w-full h-70">
@@ -16,11 +16,11 @@ const Footer = () => {
     
     
     <div>
-      <div class="mb-4">
+      <div class="w-full flex justify-center items-center" >
        
         <img src={Logo} alt="Logo" className="mt-[-10px] h-40 w-40 object-contain"/>
       </div>
-      <p class="text-sm text-gray-600">© 2025 Green Grove. All rights reserved.</p>
+     
     </div>
 
    
@@ -53,6 +53,7 @@ const Footer = () => {
     </div>
 
   </div>
+   <p class="text-sm mt-10 text-center w-full text-gray-600">© 2025 Green Grove. All rights reserved.</p>
 </footer>
 </div>
     </>

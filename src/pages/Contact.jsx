@@ -32,7 +32,7 @@ const Contact = () => {
 
   return (
     <div>
-      {/* Hero Section */}
+      
       <div
         className="relative bg-cover bg-center bg-fixed flex items-center justify-center rounded-bl-[40px] sm:rounded-bl-[100px] h-[60vh] sm:h-[80vh] lg:h-screen"
         style={{ backgroundImage: `url(${Contacts})` }}
@@ -80,7 +80,7 @@ const Contact = () => {
   {/* Contact Form Section */}
   <div className="w-full max-w-lg mx-auto bg-white rounded-2xl py-6 lg:px-1 sm:p-10 shadow-lg border border-gray-200">
   <h2 className="text-center font-sans text-gray-800 text-3xl sm:text-4xl font-semibold mb-6">
-      Contact Us
+      Let's Get in Touch!
   </h2>
   <form onSubmit={onSubmit} className="flex flex-col gap-5">
     <input

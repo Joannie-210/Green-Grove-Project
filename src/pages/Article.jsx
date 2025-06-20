@@ -274,7 +274,7 @@ const Article = () => {
         </select>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6 bg-white mt-4 px-[100px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6 bg-white mt-4 px-[50px]">
         {filteredArticles.map((article, index) => (
           <div
             key={index}

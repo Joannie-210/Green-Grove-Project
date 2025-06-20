@@ -59,9 +59,9 @@ const Tips = () => {
         </div>
       </div>
 
-      {/* ───────────────── Do & Don’t Section ───────────────── */}
+   
       <section className="py-16 px-4">
-        <h2 className="text-3xl sm:text-4xl font-semibold text-center text-green-800 mb-12">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-green-800 mb-12">
           Do’s&nbsp;&amp;&nbsp;Don’ts
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -87,22 +87,22 @@ const Tips = () => {
       </section>
 
       <section className="py-16 px-4 bg-green-50 rounded-xl shadow-inner">
-        <h2 className="text-3xl sm:text-4xl font-semibold text-center text-green-900 mb-12">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-green-900 mb-12">
           Common Mistakes
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {mistakes.map(({ title, text }, i) => (
             <div key={i} className="bg-white p-6 shadow hover:shadow-lg transition">
-              <h3 className="text-xl font-bold text-black mb-2">{title}</h3>
+              <h3 className="text-xl font-bold text-green-500 mb-2">{title}</h3>
               <p className="text-gray-700">{text}</p>
             </div>
           ))}
         </div>
       </section>
 
-      {/* ───────────────── Best Practices ───────────────── */}
+      
       <section className="py-16 px-4">
-        <h2 className="text-3xl sm:text-4xl font-semibold text-center text-green-800 mb-12">
+        <h2 className="text-3xl sm:text-4xl font-bold text-center text-green-800 mb-12">
           Best&nbsp;Practices
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -127,7 +127,7 @@ const Tips = () => {
         </div>
       </section>
 
-      {/* ───────────────── Integrated Pest Management ───────────────── */}
+      
       <section className="py-16 px-5 bg-green-50 rounded-xl shadow-inner">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <img
