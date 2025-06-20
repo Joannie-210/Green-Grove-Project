@@ -181,25 +181,25 @@ const Home = () => {
 
   return (
    <>
-      <HeroSection />
-      <div class="mx-auto w-full max-w-7xl px-1 sm:px-6 lg:px-8">
-      <div className="w-full bg-white py-5 px-6 sm:px-10 lg:px-14 lg:h-130  gap-8 flex flex-col lg:flex-row justify-evenly items-center">
-  <div
+      {/* ───────────────── Hero ───────────────── */}
+<HeroSection />
+
+{/* ───────────────── Who We Are ───────────────── */}
+<section className="w-full bg-white">
+  <div className="w-full bg-white py-5 px-6 sm:px-10 lg:px-14 lg:h-130 gap-8 flex flex-col lg:flex-row justify-evenly items-center max-w-7xl mx-auto">
+    <div
     className="flex w-full lg:w-1/2 flex-col h-auto pt-10 lg:py-10 items-center lg:items-start justify-center"
-    data-aos="fade-up"
-    data-aos-duration="1000"
+    
   >
     <h1
       className="text-2xl text-center w-full sm:text-3xl mb-6 md:text-4xl lg:text-5xl font-bold mb-4 lg:text-left"
-      data-aos="fade-down"
-      data-aos-duration="800"
+      
     >
       Who We Are
     </h1>
     <p
       className="w-full max-w-xl px-2 text-base sm:text-lg text-gray-700 text-center sm:text-left"
-      data-aos="fade-up"
-      data-aos-duration="1200"
+    
     >
       Green Groves is a user-friendly website dedicated to empowering small-scale gardening enthusiasts with practical knowledge and resources. It offers detailed guides, tool demonstrations, and product recommendations tailored for balcony, terrace, and home gardens. 
     
@@ -207,7 +207,7 @@ const Home = () => {
          <br/>
       <p className="w-full max-w-xl px-2 text-base sm:text-lg text-gray-700 text-center sm:text-left">The platform aims to make gardening accessible and enjoyable by providing real-life tips, educational videos, and expert support.</p>
    
-    <div className="mt-6 sm:mt-8" data-aos="zoom-in" data-aos-duration="1000">
+    <div className="mt-6 sm:mt-8" >
       <a
         href="/about"
         className="px-6 py-3 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors"
@@ -219,8 +219,7 @@ const Home = () => {
 
   <div
     className="mt-10 lg:mt-0 w-full max-w-md h-auto px-6 py-10 flex flex-col items-center justify-center"
-    data-aos="fade-right"
-    data-aos-duration="1000"
+  
   >
 
     <Quote className="mb-5 flex justify-start items-start w-full h-11 text-green-500" />
@@ -228,14 +227,15 @@ const Home = () => {
     <h2 className='my-5 text-2xl w-full font-semibold text-center font-Jost'>"We believe that every garden, no matter how small, can be a source of joy and nourishment."
     </h2>
   </div>
- 
+  </div>
+</section>
 
-</div>
-  <section className="w-full bg-gray-50 bg-gradient-to-br py-20 px-6 md:px-16 lg:px-24">
-  <h2
+{/* ───────────────── Our Goals ───────────────── */}
+<section className="w-full bg-gray-50 bg-gradient-to-br py-20">
+  <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24">
+    <h2
     className="text-4xl md:text-5xl text-green-700 font-bold text-center  mb-16"
-    data-aos="fade-down"
-    data-aos-duration="800"
+    
   >
     Our Goals
   </h2>
@@ -282,9 +282,7 @@ const Home = () => {
       <div
         key={idx}
         className=" border-t-6 border-green-50 backdrop-blur-md bg-white  rounded-tr-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-        data-aos="zoom-in"
-        data-aos-delay={delay}
-        data-aos-duration="1000"
+     
       >
         <div className="bg-green-100 text-green-700 text-2xl w-12 h-12 flex items-center justify-center rounded-full mb-4 shadow-inner">
           {icon}
@@ -294,9 +292,13 @@ const Home = () => {
       </div>
     ))}
   </div>
+  </div>
 </section>
-<section className="w-full bg-green-50 py-20 px-6 md:px-16 lg:px-24">
-  <div className="flex flex-col items-center mb-14" data-aos="fade-down" data-aos-duration="800">
+
+{/* ───────────────── Gardening Techniques & Tips ───────────────── */}
+<section className="w-full bg-green-50 py-20">
+  <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24">
+    <div className="flex flex-col items-center mb-14"  >
     <h2 className="text-4xl md:text-5xl font-bold text-green-700 mb-4 text-center">
       Gardening Techniques & Tips
     </h2>
@@ -326,8 +328,7 @@ const Home = () => {
       <div
         key={idx}
         className="group bg-white relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300"
-        data-aos="zoom-in"
-        data-aos-delay={idx * 100}
+       
       >
         <img
           src={image}
@@ -344,7 +345,7 @@ const Home = () => {
     ))}
   </div>
 
-  <div className="text-center" data-aos="fade-up" data-aos-duration="800">
+  <div className="text-center" >
     <a
       href="/techniques"
       className="inline-block px-6 py-3 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors font-medium"
@@ -352,10 +353,13 @@ const Home = () => {
       Explore Techniques →
     </a>
   </div>
+  </div>
 </section>
 
-<section className="w-full bg-gray-50 py-20 px-6 md:px-16 lg:px-24">
-  <div className="text-center mb-14" data-aos="fade-down">
+{/* ───────────────── Featured Gardening Tools ───────────────── */}
+<section className="w-full bg-gray-50 py-20">
+  <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24">
+   <div className="text-center mb-14" >
     <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">Featured Gardening Tools</h2>
     <p className="text-gray-600 max-w-2xl mx-auto">
       Handpicked tools to simplify your gardening journey—tested, trusted, and beginner-friendly.
@@ -387,8 +391,7 @@ const Home = () => {
       <div
         key={idx}
         className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all overflow-hidden"
-        data-aos="fade-up"
-        data-aos-delay={idx * 100}
+        
       >
         <img
           src={image}
@@ -412,7 +415,7 @@ const Home = () => {
     ))}
   </div>
 
-  <div className="mt-12 text-center" data-aos="fade-up">
+  <div className="mt-12 text-center">
     <a
       href="/tools"
       className="inline-block px-6 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors font-medium"
@@ -420,58 +423,75 @@ const Home = () => {
       See All Tools →
     </a>
   </div>
+  </div>
 </section>
- <section className="w-full bg-white py-20 px-6 md:px-16 lg:px-24">
-      <div className="text-center mb-12" data-aos="fade-down">
-        <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-2">Gardening Essentials</h2>
-        <p className="text-gray-600">All you need to get started—and keep growing.</p>
-      </div>
 
-      <div className="flex flex-wrap justify-center gap-4 mb-10" data-aos="fade-up">
-        {Object.keys(essentials).map((tab) => (
-          <button
-            key={tab}
-            onClick={() => setActiveTab(tab)}
-            className={`px-5 py-2 rounded-full border text-sm font-medium transition-all ${
-              activeTab === tab
-                ? 'bg-green-600 text-white border-green-600'
-                : 'bg-white text-green-600 border-green-300 hover:bg-green-50'
-            }`}
-          >
-            {essentials[tab].title}
-          </button>
-        ))}
-      </div>
+{/* ───────────────── Gardening Essentials ───────────────── */}
+<section className="w-full bg-white py-20">
+  <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24">
+    {/* Heading */}
+    <div className="text-center mb-10" >
+      <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-2">
+        Gardening Essentials
+      </h2>
+      <p className="text-gray-600">
+        All you need to get started—and keep growing.
+      </p>
+    </div>
 
-      <div
-        className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10"
-        data-aos="zoom-in"
-      >
-        <img
-          src={current.icon}
-          alt={current.title}
-          className="w-32 h-32 object-cover border-3 border-green-700 rounded-full"
-        />
-        <div className="text-center md:text-left">
-          <h3 className="text-2xl font-semibold text-green-700 mb-3">{current.title}</h3>
-          <p className="text-gray-600 mb-5">{current.desc}</p>
-          <a
-            href={current.link}
-            className="inline-block px-5 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors"
-          >
-            View Details →
-          </a>
-        </div>
-      </div>
-    </section>
+    {/* Tabs */}
+    <div className="flex flex-wrap justify-center gap-4 mb-4">
+      {Object.keys(essentials).map((tab) => (
+        <button
+          key={tab}
+          onClick={() => setActiveTab(tab)}
+          className={`px-5 py-2 rounded-full border text-sm font-medium transition-all ${
+            activeTab === tab
+              ? 'bg-green-600 text-white border-green-600'
+              : 'bg-white text-green-600 border-green-300 hover:bg-green-50'
+          }`}
+        >
+          {essentials[tab].title}
+        </button>
+      ))}
+    </div>
 
-      <section className="py-20 bg-green-700 px-6 md:px-16 lg:px-24">
-      <div className="text-center mb-12" data-aos="fade-down">
+    {/* Selected Tab Content */}
+    <div
+      className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10"
+
+    >
+      <img
+        src={current.icon}
+        alt={current.title}
+        className="w-32 h-32 object-cover border-4 border-green-700 rounded-full"
+      />
+      <div className="text-center md:text-left">
+        <h3 className="text-2xl font-semibold text-green-700 mb-3">
+          {current.title}
+        </h3>
+        <p className="text-gray-600 mb-5">{current.desc}</p>
+        <a
+          href={current.link}
+          className="inline-block px-5 py-2 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors"
+        >
+          View Details →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{/* ───────────────── Pots & Containers ───────────────── */}
+<section className="w-full bg-green-700 py-20">
+  <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24">
+   <div className="text-center mb-12" data-aos="fade-down">
         <h2 className="text-4xl md:text-5xl font-bold text-white mb-3">Pots & Containers</h2>
         <p className="text-gray-50">Find the perfect home for your plants.</p>
       </div>
 
-      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" data-aos="zoom-in">
+      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4" >
         {pots.map((pot, index) => (
           <div
             key={index}
@@ -492,7 +512,7 @@ const Home = () => {
         ))}
       </div>
 
-      <div className="mt-12 text-center" data-aos="fade-up">
+      <div className="mt-12 text-center" >
         <a
           href="/"
           className="inline-block px-6 py-4 bg-white text-green-500 rounded-full hover:shadow-lg hover:bg-black transition-colors"
@@ -500,9 +520,13 @@ const Home = () => {
           Read: Choosing the Right Container →
         </a>
       </div>
-    </section>
-    <section className="py-20 bg-white px-6 md:px-16 lg:px-24">
-      <div className="text-center mb-12" data-aos="fade-up">
+      </div>
+</section>
+
+{/* ───────────────── Accessories & Decoration Ideas ───────────────── */}
+<section className="w-full bg-white py-20">
+  <div className="max-w-7xl mx-auto md:px-16 lg:px-24">
+   <div className="text-center mb-12" >
         <h2 className="text-4xl font-bold text-green-800 mb-3">Accessories & Decoration Ideas</h2>
         <p className="text-gray-600">Elevate your garden space with thoughtful, aesthetic touches.</p>
       </div>
@@ -514,7 +538,7 @@ const Home = () => {
         {accessories.map((item, index) => (
           <div
             key={index}
-            className="min-w-[260px] lg:min-w-0 bg-gray-50 hover:bg-green-50 transition-colors rounded-xl shadow-sm hover:shadow-md p-4 flex flex-col items-center text-center"
+            className="min-w-[260px] lg:min-w-0  hover:bg-green-50 transition-colors rounded-xl hover:shadow-md p-4 flex flex-col items-center text-center"
           >
             <img
               src={item.image}
@@ -535,159 +559,82 @@ const Home = () => {
           More Garden Aesthetics →
         </a>
       </div>
-    </section>
-     <section className="px-6 md:px-12 lg:px-24 py-20 bg-gray-50">
-      <div className="text-center mb-10" data-aos="fade-down">
-        <h2 className="text-2xl font-bold text-green-800 mb-2">Product Recommendations</h2>
-        <p className="text-gray-600">Carefully curated picks to help your garden thrive.</p>
       </div>
+</section>
 
-      {/* Filter Buttons */}
-      <div className="flex justify-center gap-4 mb-10" data-aos="fade-up">
-        {['All', 'Tools', 'Accessories', 'Books'].map(cat => (
-          <button
-            key={cat}
-            onClick={() => setFilter(cat)}
-            className={`px-3 py-2 rounded-full text-sm font-medium transition-colors ${
-              filter === cat
-                ? 'bg-green-600 text-white'
-                : 'bg-white text-green-700 border border-green-400 hover:bg-green-100'
-            }`}
-          >
-            {cat}
-          </button>
-        ))}
-      </div>
+{/* ───────────────── Product Recommendations ───────────────── */}
+<section className="w-full bg-gray-50 py-20">
+  <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24">
+    {/* Header */}
+    <h2 className="text-2xl font-bold text-center text-green-800 mb-2">Product Recommendations</h2>
+    <p className="text-gray-600 text-center">Carefully curated picks to help your garden thrive.</p>
+  </div>
 
+  {/* Filter Buttons */}
+  <div className="flex justify-center gap-4 mb-10">
+    {['All', 'Tools', 'Accessories', 'Books'].map((cat) => (
+      <button
+        key={cat}
+        onClick={() => setFilter(cat)}
+        className={`px-3 py-2 rounded-full text-sm font-medium transition-colors ${
+          filter === cat
+            ? 'bg-green-600 text-white'
+            : 'bg-white text-green-700 border border-green-400 hover:bg-green-100'
+        }`}
+      >
+        {cat}
+      </button>
+    ))}
+  </div>
+
+  {/* Masonry Product Grid */}
+  <div
+    className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[auto] md:auto-rows-[300px]"
     
-      <div
-        className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[auto] md:auto-rows-[300px]"
-        data-aos="fade-up"
+  >
+    {filteredProducts.map((product, i) => (
+      <a
+        key={product.id}
+        href={product.link}
+        className={`relative bg-white rounded-2xl shadow-md overflow-hidden transition-transform hover:-translate-y-1 hover:shadow-lg ${
+          i % 5 === 0 ? 'md:col-span-2 md:row-span-2' : 'md:col-span-1'
+        }`}
       >
-        {filteredProducts.map((product, i) => (
-          <a
-            key={product.id}
-            href={product.link}
-            className={`relative bg-white rounded-2xl shadow-md overflow-hidden transition-transform hover:-translate-y-1 hover:shadow-lg
-              ${i % 5 === 0 ? 'md:col-span-2 md:row-span-2' : 'md:col-span-1'}`}
-          >
-            <img
-              src={product.image}
-              alt={product.name}
-              className="w-full h-2/3 object-cover"
-            />
-            <div className="p-4">
-              <h3 className="font-semibold text-green-700">{product.name}</h3>
-              <p className="text-sm text-gray-600">{product.desc}</p>
-            </div>
-          </a>
-        ))}
-      </div>
-
-      {/* CTA */}
-      <div className="text-center mt-14" data-aos="zoom-in-up">
-        <a
-          href="/recommendations"
-          className="inline-block px-6 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors"
-        >
-          See More Recommendations →
-        </a>
-      </div>
-    </section>
-    <section className="px-6 w-full md:px-16 lg:px-28 py-20 bg-green-700 text-white">
-  {/* Section Heading */}
-  <div className="text-center mb-14" data-aos="fade-down">
-    <h2 className="text-4xl font-bold text-white">Educational Media</h2>
-    <p className="text-gray-50 mt-2">Learn through videos and curated book picks.</p>
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-full h-2/3 object-cover"
+        />
+        <div className="p-4">
+          <h3 className="font-semibold text-green-700">{product.name}</h3>
+          <p className="text-sm text-gray-600">{product.desc}</p>
+        </div>
+      </a>
+    ))}
   </div>
 
-  {/* --- Videos Section --- */}
-  <div className="mb-20">
-    <h3 className="text-2xl font-semibold text-white mb-6" data-aos="fade-right">Video Guides</h3>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {[1, 2, 3].map((v, i) => (
-        <div key={i} className="aspect-video rounded-xl overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-delay={`${i * 100}`}>
-          <iframe
-            className="w-full h-full"
-            src={`https://www.youtube.com/embed/${['dQw4w9WgXcQ', '5MgBikgcWnY', 'kXZSf8hCENY'][i]}`}
-            title="Gardening Video"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          />
-        </div>
-      ))}
-    </div>
-    <div className="text-center mt-8" data-aos="fade-up">
-      <a
-        href="/videos"
-        className="inline-block px-6 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors"
-      >
-        Watch More →
-      </a>
-    </div>
-  </div>
-
-  {/* --- Books Section --- */}
-  <div>
-    <h3 className="text-2xl font-semibold text-white mb-6" data-aos="fade-left">Recommended Books</h3>
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-      {[
-        {
-          title: 'Urban Gardening Basics',
-          cover:  Book,
-          linkBuy: '#',
-          linkBorrow: '#',
-        },
-        {
-          title: 'Balcony Botanica',
-          cover: Books,
-          linkBuy: '#',
-          linkBorrow: '#',
-        },
-        {
-          title: 'Grow From Home',
-          cover: Bookss,
-          linkBuy: '#',
-          linkBorrow: '#',
-        },
-        {
-          title: 'Soil & Soul',
-          cover: Booksss,
-          linkBuy: '#',
-          linkBorrow: '#',
-        },
-      ].map((book, i) => (
-        <div
-          key={i}
-          className="bg-gray-100 overflow-hidden shadow-md p-4 flex flex-col items-center text-center"
-          data-aos="fade-up"
-          data-aos-delay={`${i * 100}`}
-        >
-          <img src={book.cover} alt={book.title} className="w-32 h-44 object-cover mb-4 rounded" />
-          <h4 className="text-green-500 font-medium text-lg">{book.title}</h4>
-          <div className="mt-2 space-x-2">
-            <a href={book.linkBuy} className="text-sm text-blue-600 hover:underline">Buy</a>
-            <a href={book.linkBorrow} className="text-sm text-gray-600 hover:underline">Borrow</a>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    <div className="text-center mt-10" data-aos="zoom-in-up">
-      <a
-        href="/books"
-        className="inline-block px-6 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors"
-      >
-        Explore Gardening Books →
-      </a>
-    </div>
+  {/* CTA Button */}
+  <div className="text-center mt-14" >
+    <a
+      href="/recommendations"
+      className="inline-block px-6 py-3 bg-green-600 text-white rounded-full hover:bg-green-700 transition-colors"
+    >
+      See More Recommendations →
+    </a>
   </div>
 </section>
-<section className="bg-gray-50 py-20 px-6 md:px-16 lg:px-28">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+
+
+{/* ───────────────── Educational Media ───────────────── */}
+
+
+
+{/* ───────────────── About & Contact ───────────────── */}
+<section className="w-full bg-gray-50 py-20">
+  <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-28">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
     {/* --- About Us Snippet --- */}
-    <div data-aos="fade-right">
+    <div>
       <h2 className="text-3xl font-bold text-green-800 mb-4">About Us</h2>
       <p className="text-gray-700 text-lg mb-4">
         Green Groves is on a mission to make small-scale gardening practical and joyful for everyone—
@@ -702,7 +649,7 @@ const Home = () => {
     </div>
 
     {/* --- Contact Info & Map --- */}
-    <div data-aos="fade-left">
+    <div>
       <h2 className="text-3xl font-bold text-green-800 mb-4">Contact Us</h2>
       <div className="text-gray-700 space-y-2 mb-6">
         <p><strong>Email:</strong> hello@greengroves.com</p>
@@ -730,8 +677,10 @@ const Home = () => {
       </a>
     </div>
   </div>
+  </div>
 </section>
-</div>
+
+
     </>
   )
 }

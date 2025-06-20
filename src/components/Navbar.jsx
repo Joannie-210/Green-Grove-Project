@@ -46,14 +46,12 @@ const Navbar = () => {
     </span>
   );
 
-  // ────────────────────────────────────────────────────────────────
-  // render
-  // ────────────────────────────────────────────────────────────────
+
   return (
     <header className="w-full fixed top-0 left-0 z-50 flex justify-center items-center h-[100px]">
       <nav
         className={clsx(
-          'w-full lg:w-280 max-w-screen-xl px-4 py-2 flex items-center justify-between rounded-full transition-all duration-300 ease-in-out',
+          'w-full lg:w-280 max-w-screen-xl px-4 py-1 flex items-center justify-between rounded-full transition-all duration-300 ease-in-out',
           scrolled
             ? 'bg-black/90 shadow-lg text-white'
             : 'bg-white/20 backdrop-blur-sm shadow-md text-green-500'

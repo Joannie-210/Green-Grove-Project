@@ -22,7 +22,7 @@ const Ticker = () => {
     setTime(formattedTime);
   };
 
-  // Gets user's location
+  
   const getLocation = () => {
     if (!navigator.geolocation) {
       setError('Geolocation not supported by your browser.');
@@ -48,7 +48,7 @@ const Ticker = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Dynamic scrolling message
+  
   const message = `📅 ${time} ${
     error
       ? `⚠️ ${error}`
@@ -58,7 +58,7 @@ const Ticker = () => {
   }`;
 
   return (
-    <div className="fixed bottom-0 left-0 w-full z-50 text-sm bg-green-800 text-white">
+    <div className="fixed bottom-0 left-0 w-full z-50 text-sm bg-white text-black">
       <Marquee pauseOnHover gradient={false} speed={50}>
         <p className="px-4 py-2">
           {message}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
