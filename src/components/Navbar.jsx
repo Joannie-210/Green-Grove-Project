@@ -31,9 +31,7 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // ────────────────────────────────────────────────────────────────
-  // helpers
-  // ────────────────────────────────────────────────────────────────
+
   const linkClasses = ({ isActive }) =>
     clsx(
       'transition-colors',
@@ -51,7 +49,7 @@ const Navbar = () => {
     <header className="w-full fixed top-0 left-0 z-50 flex justify-center items-center h-[100px]">
       <nav
         className={clsx(
-          'w-full lg:w-280 max-w-screen-xl px-4 py-1 flex items-center justify-between rounded-full transition-all duration-300 ease-in-out',
+          'w-full lg:w-280 max-w-screen-xl px-4 py-3 flex items-center justify-between rounded-full transition-all duration-300 ease-in-out',
           scrolled
             ? 'bg-black/90 shadow-lg text-white'
             : 'bg-white/20 backdrop-blur-sm shadow-md text-green-500'
@@ -62,20 +60,29 @@ const Navbar = () => {
           <img
             src={Logo}
             alt="Home"
-            className="w-16 h-16 object-cover rounded-full"
+            className="w-12 h-12 object-cover rounded-full"
           />
         </NavLink>
 
-        
+        <div className='w-25 flex justify-between items-center'>
+           <span className="md:hidden text-[11px] flex gap-1 items-center">
+            <UserRound size={14} /> {visitCount}{' '}
+            {visitCount === 1 ? 'visit' : 'visits'}
+          </span>
         <button
           className="md:hidden text-white"
           onClick={() => setMenuOpen((prev) => !prev)}
           aria-label="Toggle navigation menu"
         >
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+          {menuOpen ? (
+            <X size={24} />
+            
+            )  : <Menu size={24} />}
         </button>
-
-        {/* ───── Nav links ───── */}
+ 
+         
+       </div>
+       
         <ul
           className={clsx(
             'md:flex absolute md:static top-full left-0 w-full md:w-auto bg-black md:bg-transparent text-white md:flex-row flex-col gap-6 px-6 py-4 md:py-0 md:gap-8 lg:gap-14 z-40 transition-all duration-300 ease-in-out',
@@ -91,7 +98,7 @@ const Navbar = () => {
             </NavLink>
           </li>
 
-          {/* Products dropdown */}
+       
           <li className="relative group w-full md:w-auto">
             <div
               className="flex justify-center items-center gap-1 cursor-pointer text-white"
@@ -143,6 +150,7 @@ const Navbar = () => {
                   Garden Accessories
                 </NavLink>
               </li>
+              
               <li>
                 <NavLink
                   to="/tips"
@@ -151,8 +159,19 @@ const Navbar = () => {
                   Gardening Tips
                 </NavLink>
               </li>
+
+               <li>
+                <NavLink
+                  to="/pots"
+                  className="block px-4 py-2 hover:text-green-100"
+                >
+                  Pots & Containers
+                </NavLink>
+              </li>
             </ul>
           </li>
+
+          
 
           {/* Learn and Explore dropdown */}
           <li className="relative group w-full md:w-auto">
@@ -169,6 +188,7 @@ const Navbar = () => {
                   'group-hover:rotate-180': !learnOpen,
                 })}
               />
+               
             </div>
 
             <ul
@@ -205,7 +225,7 @@ const Navbar = () => {
             </NavLink>
           </li>
 
-          {/* Contact (last) */}
+       
           <li className="group relative text-center mb-3 hover:text-green-500">
             <NavLink to="/contact" className={linkClasses}>
               {underlineSpan('Contact')}

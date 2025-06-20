@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Essential from './pages/Essential.jsx'
+import Pots from './pages/Pots.jsx'
 import Tools from './pages/Tools.jsx'
 import Article from './pages/Article.jsx'
 import Contact from './pages/Contact.jsx'
@@ -33,6 +34,7 @@ function App() {
        <Route path="/tools" element={<Tools />} />
          <Route path="/contact" element={<Contact />} />
            <Route path="/article" element={<Article />} />
+              <Route path="/pots" element={<Pots/>} />
              <Route path="/recommendations" element={<Recs/>} />
       </Routes>
     </Router>
