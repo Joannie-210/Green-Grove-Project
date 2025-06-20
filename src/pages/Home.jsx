@@ -82,11 +82,7 @@ const accessories = [
     image: Toys,
     desc: 'Add charm to your pots with cute figurines and fairy garden sets.',
   },
-  {
-    name: 'Decorative Pebbles',
-    image: Pebs,
-    desc: 'Enhance soil surfaces with colored stones and textured gravels.',
-  },
+ 
   {
     name: 'Hanging Ornaments',
     image: Hang,
