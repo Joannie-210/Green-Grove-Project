@@ -9,6 +9,7 @@ import Shear from '../assets/shear.jpg'
 import Wand from '../assets/wand.jpg'
 import Comp from '../assets/compact.jpg'
 
+
 const Tools = () => {
   useEffect(() => {
       AOS.init({

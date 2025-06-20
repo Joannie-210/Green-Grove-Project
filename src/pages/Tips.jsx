@@ -2,6 +2,8 @@ import React from 'react';
 import aboutus from '../assets/aboutusimg.jpg';
 import AOS from 'aos';
 import { useEffect } from 'react';
+import Wat from '../assets/watplant.jpeg'
+import Insp from '../assets/inspect.jpeg'
 
 
 const dos = [
@@ -118,7 +120,7 @@ const Tips = () => {
           </div>
           {/* illustrative image */}
           <img
-            src=''
+            src={Wat}
             alt="Gardener watering plants"
             className="rounded-xl shadow-lg w-full h-72 object-cover"
           />
@@ -129,7 +131,7 @@ const Tips = () => {
       <section className="py-16 px-5 bg-green-50 rounded-xl shadow-inner">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <img
-            src=''
+            src={Insp}
             alt="Inspecting leaves for pests"
             className="rounded-xl shadow-lg w-full h-72 object-cover order-last lg:order-first"
           />
