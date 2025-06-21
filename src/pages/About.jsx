@@ -160,9 +160,11 @@ const About = () => {
       <div className="px-15 py-20  text-gray-800">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-col items-center justify-center text-center pb-[10px] gap-4">
-            <h2 className="text-3xl font-bold text-green-700">Our Mission</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-green-700">
+              Our Mission
+            </h2>
             <p
-              className="text-green-950 font-Jost font-extrabold text-5xl w-[400px] pb-[70px]"
+              className="text-green-950 font-Jost font-extrabold text-3xl sm:text-4xl md:text-5xl max-w-full sm:max-w-md pb-10"
               data-aos="fade-up"
             >
               Helping You Grow Wherever You Are
@@ -257,7 +259,7 @@ const About = () => {
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Team Member Card */}
           {[
-            { img: boy, name: "Gerard myGuy", delay: "0" },
+            { img: boy, name: "Gerard", delay: "0" },
             { img: girl, name: "Joanna Enoch", delay: "150" },
             { img: boy2, name: "Gaadi Tartor", delay: "200" },
           ].map((member, index) => (
@@ -268,11 +270,11 @@ const About = () => {
               data-aos-delay={member.delay}
             >
               <div
-                className="bg-cover bg-center h-[450px] w-full rounded-md bg-gray-700"
+                className="bg-cover bg-center h-[450px] w-full border-2 rounded-md bg-gray-700"
                 style={{ backgroundImage: `url(${member.img})` }}
               ></div>
 
-              <div className="absolute bottom-20 left-0 w-[85%] sm:w-[250px] bg-white rounded-tr-md rounded-br-md p-3 opacity-0 group-hover:opacity-100 transform -translate-x-10 group-hover:translate-x-0 transition duration-300 ease-in-out">
+              <div className="absolute bottom-0 left-0 w-[100%] sm:w-[100%] border-2 rounded-b-md bg-white p-4  transform translate-x-0 transition duration-300 ease-in-out">
                 <p className="font-semibold text-xl">{member.name}</p>
                 <p className="text-green-700">Garden Designer</p>
                 <div className="flex gap-3 mt-3">
