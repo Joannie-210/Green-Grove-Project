@@ -257,7 +257,7 @@ const About = () => {
 
       
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {/* Team Member Card */}
+          
           {[
             { img: boy, name: "Gerard", delay: "0" },
             { img: girl, name: "Joanna Enoch", delay: "150" },
@@ -270,11 +270,11 @@ const About = () => {
               data-aos-delay={member.delay}
             >
               <div
-                className="bg-cover bg-center h-[450px] w-full border shadow-md rounded-md bg-gray-700"
+                className="bg-cover bg-center h-[450px] w-full  shadow-md rounded-md bg-gray-700"
                 style={{ backgroundImage: `url(${member.img})` }}
               ></div>
 
-              <div className="absolute bottom-0 left-0 w-[100%] sm:w-[100%] border-2 rounded-b-md bg-white p-4  transform translate-x-0 transition duration-300 ease-in-out">
+              <div className="absolute bottom-0 left-0 w-[100%] sm:w-[100%]  rounded-b-md bg-white p-4  transform translate-x-0 transition duration-300 ease-in-out">
                 <p className="font-semibold text-xl">{member.name}</p>
                 <p className="text-green-700">Garden Designer</p>
                 <div className="flex gap-3 mt-3">
