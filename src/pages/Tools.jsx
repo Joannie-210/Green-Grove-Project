@@ -11,12 +11,20 @@ import Comp from '../assets/compact.jpg'
 
 
 const Tools = () => {
+  const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+}
+
   useEffect(() => {
       AOS.init({
         duration: 1000,
         once: false,
       })
     }, [])
+
 
     const toolsData = [
   {
@@ -84,7 +92,7 @@ const Tools = () => {
         </div>
       </section>
 
-      {/* Video Section (optional) */}
+      
       <section className="py-16 bg-green-50 rounded-xl shadow-inner">
         <h2 className="text-3xl font-semibold text-center mb-8 text-green-900">
           Watch: How to Use These Tools
@@ -100,8 +108,9 @@ const Tools = () => {
           ></iframe>
         </div>
       </section>
-
-    
+<button onClick={scrollToTop} className="fixed bottom-10 right-10 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition duration-300 w-[50px] h-[50px] flex items-center justify-center hover:cursor-pointer">
+      <i className="bi bi-arrow-up text-xl"></i>
+     </button>
     </div>
     
 </>

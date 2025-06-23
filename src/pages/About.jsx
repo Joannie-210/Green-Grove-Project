@@ -242,7 +242,7 @@ const About = () => {
       </div>
 
       <div className="pt-20 pb-20 px-6 sm:px-10 lg:px-[60px]">
-        {/* Heading */}
+ 
         <div className="text-center flex flex-col gap-4 items-center">
           <p className="text-green-700 font-bold text-2xl sm:text-3xl">
             Our Team
@@ -255,7 +255,7 @@ const About = () => {
           </h2>
         </div>
 
-        {/* Team Grid */}
+      
         <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {/* Team Member Card */}
           {[
@@ -270,7 +270,7 @@ const About = () => {
               data-aos-delay={member.delay}
             >
               <div
-                className="bg-cover bg-center h-[450px] w-full border-2 rounded-md bg-gray-700"
+                className="bg-cover bg-center h-[450px] w-full border shadow-md rounded-md bg-gray-700"
                 style={{ backgroundImage: `url(${member.img})` }}
               ></div>
 

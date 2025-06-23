@@ -25,7 +25,12 @@ import Comp from '../assets/comp.jpeg';
 import Can from '../assets/Can.jpeg';
 import Idea from '../assets/idea.jpeg';
 
-
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+}
 
 const essentials = {
   Soil: {
@@ -167,10 +172,9 @@ const Home = () => {
 
   return (
    <>
-      {/* ───────────────── Hero ───────────────── */}
+    
 <HeroSection />
 
-{/* ───────────────── Who We Are ───────────────── */}
 <section className="w-full bg-white">
   <div className="w-full bg-white py-5 px-6 sm:px-10 lg:px-14 lg:h-130 gap-8 flex flex-col lg:flex-row justify-evenly items-center max-w-7xl mx-auto">
     <div
@@ -216,7 +220,7 @@ const Home = () => {
   </div>
 </section>
 
-{/* ───────────────── Our Goals ───────────────── */}
+
 <section className="w-full bg-gray-50 bg-gradient-to-br py-20">
   <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24">
     <h2
@@ -281,7 +285,7 @@ const Home = () => {
   </div>
 </section>
 
-{/* ───────────────── Gardening Techniques & Tips ───────────────── */}
+
 <section className="w-full bg-green-50 py-20">
   <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24">
     <div className="flex flex-col items-center mb-14"  >
@@ -415,7 +419,7 @@ const Home = () => {
 
 <section className="w-full bg-white py-20">
   <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24">
-    {/* Heading */}
+
     <div className="text-center mb-10" >
       <h2 className="text-4xl md:text-5xl font-bold text-green-800 mb-2">
         Gardening Essentials
@@ -442,7 +446,7 @@ const Home = () => {
       ))}
     </div>
 
-    {/* Selected Tab Content */}
+    
     <div
       className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-10"
 
@@ -457,12 +461,12 @@ const Home = () => {
           {current.title}
         </h3>
         <p className="text-gray-600 mb-5">{current.desc}</p>
-        <a
+        <Link to = '/essential'
           href={current.link}
           className="inline-block px-5 py-2 bg-green-500 text-white rounded-full hover:bg-green-700 transition-colors"
         >
           View Details →
-        </a>
+        </Link>
       </div>
     </div>
   </div>
@@ -646,7 +650,10 @@ const Home = () => {
   </div>
 </section>
 
+<button onClick={scrollToTop} className="fixed bottom-10 right-10 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition duration-300 w-[50px] h-[50px] flex items-center justify-center hover:cursor-pointer">
+      <i className="bi bi-arrow-up text-xl"></i>
 
+     </button>
     </>
   )
 }

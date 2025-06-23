@@ -30,6 +30,13 @@ const Contact = () => {
     }
   };
 
+  const scrollToTop = () => {
+ window.scrollTo({
+  top: 0,
+  behavior: 'smooth'
+ })
+  }
+
   return (
     <div>
       
@@ -44,12 +51,12 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Form Section */}
+      
     <div className="lg:h-200 flex flex-col lg:flex-row justify-between lg:pt-15  items-start gap-10 min-w-full h-auto py-5 px-4 sm:px-10">
   {/* Contact Info Section */}
   <div className="hidden md:flex flex-col justify-start md:w-full  w-150 max-w-4xl rounded-lg">
-<h1 className="text-2xl w-full md:text-6xl  md:text-center lg:text-5xl  lg:text-left font-bold mt-5 mb-4">Drop the line, let's chat</h1>
-    <h2 className="text-xl mb-6">Don't hesitate to say a hello!</h2>
+<h1 className="text-2xl w-full md:text-5xl  md:text-center lg:text-4xl  lg:text-left font-bold mt-5 mb-4">Drop the line, let's chat</h1>
+    <h2 className="text-xl text-gray-600 mb-6">Don't hesitate to say a hello!</h2>
 
     <div className="flex flex-col  items-center md:justify-between  md:flex-row lg:items-center lg:justify-between gap-6">
       <div className="flex flex-col text-black">
@@ -121,7 +128,10 @@ const Contact = () => {
 </div>
 
 </div>
+<button onClick={scrollToTop} className="fixed bottom-10 right-10 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition duration-300 w-[50px] h-[50px] flex items-center justify-center hover:cursor-pointer">
+      <i className="bi bi-arrow-up text-xl"></i>
 
+     </button>
     </div>
   );
 };
