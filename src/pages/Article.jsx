@@ -249,13 +249,10 @@ const Article = () => {
       >
         <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/60 to-black/60 rounded-bl-[60px] sm:rounded-bl-[100px]"></div>
         <div className="relative z-10 px-4">
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+          <h1 className="text-white text-center text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
             Gardening Articles
           </h1>
-          <p className="text-white text-xl font-medium max-w-3xl">
-            Read through our free articles to find tons of tips and tricks, plus
-            an endless array of creative ideas to keep you inspired.
-          </p>
+         
         </div>
       </div>
 
@@ -296,7 +293,7 @@ const Article = () => {
               </p>
               <a
                 href={article.link}
-                className="text-red-500 font-medium hover:underline"
+                className="text-green-500 font-medium hover:underline"
               >
                 View Content →
               </a>

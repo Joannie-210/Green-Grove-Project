@@ -43,6 +43,14 @@ const Tips = () => {
         once: false,
       })
     }, [])
+
+    const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+}
+
   return (
     <div className="mx-auto w-full max-w-7xl px-0 sm:px-0 lg:px-0">
    
@@ -148,7 +156,10 @@ const Tips = () => {
           </div>
         </div>
       </section>
+<button onClick={scrollToTop} className="fixed bottom-10 right-10 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition duration-300 w-[50px] h-[50px] flex items-center justify-center hover:cursor-pointer">
+      <i className="bi bi-arrow-up text-xl"></i>
 
+     </button>
     </div>
   );
 };

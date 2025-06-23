@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Acc from '../assets/accbg.jpg'
 import Main from '../assets/mainaccbg.jpg'
 import Fairy from '../assets/fairy.jpg'
@@ -8,6 +8,9 @@ import Hang from '../assets/hanger.jpeg'
 import string from '../assets/string.jpeg'
 import Dome from '../assets/dome.jpeg'
 import Self from '../assets/self.jpeg'
+import AOS from 'aos';
+
+
 
 const categories = [
   { id: 'mini',  label: 'Miniature Toys',    image: {} },
@@ -72,6 +75,21 @@ const allAccessories = [
 
 
 const Accessory = () => {
+
+   const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })
+}
+
+  useEffect(() => {
+      AOS.init({
+        duration: 1000,
+        once: false,
+      });
+    }, []);
+
   const [active, setActive] = useState('all');
 
   const filtered =
@@ -81,10 +99,10 @@ const Accessory = () => {
 
   return (
     <div className="mx-auto w-full max-w-7xl px-0 sm:px-6 lg:px-0">
-      {/* ───────── Hero ───────── */}
+      
       <div
         className="relative bg-cover bg-center bg-fixed flex items-center justify-center rounded-bl-[60px] sm:rounded-bl-[100px] h-[60vh] sm:h-[80vh] lg:h-screen"
-        style={{ backgroundImage: `url(${Main})` }}
+        style={{ backgroundImage: `url(${Main})` }} data-aos="fade-up"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/60 to-black/60 rounded-bl-[60px] sm:rounded-bl-[100px]" />
         <div className="relative z-10 text-center px-4">
@@ -95,7 +113,7 @@ const Accessory = () => {
         </div>
       </div>
 
-      {/* ───────── Category Selector ───────── */}
+      
       <section className="py-16">
         <h2 className="text-3xl sm:text-4xl font-bold text-center text-green-800 mb-10">
           Browse by Category
@@ -250,6 +268,9 @@ const Accessory = () => {
           Shop Accessories
         </a>
       </section>
+      <button onClick={scrollToTop} className="fixed bottom-10 right-10 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition duration-300 w-[50px] h-[50px] flex items-center justify-center hover:cursor-pointer">
+      <i className="bi bi-arrow-up text-xl"></i>
+     </button>
     </div>
   );
 };
