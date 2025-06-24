@@ -41,9 +41,7 @@ const scrollToTop = () => {
     });
   }
   
-  useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
+
 
 const tools = [
   {
@@ -93,6 +91,10 @@ const Essential = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: false });
   }, []);
+
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
 
   const [activeTab, setActiveTab] = useState("Soil");
 

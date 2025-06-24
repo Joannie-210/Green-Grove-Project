@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import {Quote} from 'lucide-react'
 import AOS from 'aos'
 import '@fontsource/jost';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Herb from '../assets/balconyherb.jpeg';
 import Compost from '../assets/compost.jpg';
 import Water from '../assets/water.webp';
@@ -32,9 +32,7 @@ const scrollToTop = () => {
   })
 }
 
-useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
+
 
 
 const essentials = {
@@ -163,6 +161,10 @@ const Home = () => {
       once: true,
     });
   }, []);
+
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
 
    const [activeTab, setActiveTab] = useState("Soil");
 
