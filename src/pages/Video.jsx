@@ -200,7 +200,7 @@ const Video = () => {
 
   return (
     <>
-      <div className="relative w-full h-[300px] md:h-[400px] lg:h-[500px] overflow-hidden">
+      <div className="relative w-full min-h-screen md:h-[400px] lg:h-[500px] overflow-hidden">
         <video
           src={gardvid}
           autoPlay
@@ -211,22 +211,20 @@ const Video = () => {
         />
         <div className="relative z-10 flex flex-col items-center justify-center w-full h-full px-4">
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center font-bold text-white">
-            Let Your Garden Journey Begin 🌿
+            Watch, Learn, Grow!
           </h1>
-          <p className="text-2xl sm:text-md md:text-xl lg:text-2xl text-green-500 font-semibold">
-            Watch, Learn, Grow
-          </p>
+         
         </div>
       </div>
 
       <div className="px-6 py-10 md:px-10 md:py-20">
-        <h2 className="font-Poppins text-5xl lg:text-5xl md:text-4xl sm:text-3xl mb-5 text-green-700">Videos:</h2>
+        <h2 className="font-Poppins text-xl lg:text-2xl md:text-2xl sm:text-2xl mb-5 text-black">Watch our videos here:</h2>
 
         <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {currentVideos.map(({ name, desc, video }, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-xl shadow-md hover:shadow-lg transition-all overflow-hidden"
+              className="bg-white shadow-md hover:shadow-lg transition-all overflow-hidden"
             >
               <div className="p-5">
                 <div className="aspect-video w-full rounded-md overflow-hidden mb-4">
@@ -238,8 +236,8 @@ const Video = () => {
                     className="w-full h-full border-none"
                   ></iframe>
                 </div>
-                <h3 className="text-2xl font-Poppins mb-2 font-semibold text-green-800">{name}</h3>
-                <p className="text-gray-600 text-md font-Poppins mb-4">{desc}</p>
+                <h3 className="text-lg font-Poppins mb-2 font-semibold text-green-500">{name}</h3>
+                <p className="text-gray-600 text-[13px] font-Poppins mb-4">{desc}</p>
               </div>
             </div>
           ))}
@@ -249,9 +247,9 @@ const Video = () => {
           <button
             onClick={handlePrev}
             disabled={page === 0}
-            className="bg-green-600 text-white px-6 py-2 rounded-full disabled:opacity-50"
+            className=" cursor-pointer text-green-500 disabled:opacity-50"
           >
-            ⬅️ Prev
+           Prev
           </button>
           <span className="text-green-800 font-semibold">
             Page {page + 1} of {totalPages}
@@ -259,9 +257,9 @@ const Video = () => {
           <button
             onClick={handleNext}
             disabled={page === totalPages - 1}
-            className="bg-green-600 text-white px-6 py-2 rounded-full disabled:opacity-50"
+            className="text-green-500 cursor-pointer disabled:opacity-50"
           >
-            Next ➡️
+            Next 
           </button>
         </div>
       </div>
