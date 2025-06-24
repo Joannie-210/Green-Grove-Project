@@ -15,6 +15,11 @@ import CountUp from "react-countup";
 import { geolocation } from "./About";
 
 const About = () => {
+
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,

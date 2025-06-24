@@ -1,7 +1,13 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import gardvid from "../assets/gardVid.mp4";
 
 const Video = () => {
+
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
+
   const allVideos = [
     {
       name: "Perfect steps to remove invasive plants from your garden",

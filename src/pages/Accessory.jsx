@@ -75,6 +75,10 @@ const allAccessories = [
 
 
 const Accessory = () => {
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
 
    const scrollToTop = () => {
   window.scrollTo({

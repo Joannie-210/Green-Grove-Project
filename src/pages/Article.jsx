@@ -34,6 +34,11 @@ const Article = () => {
     AOS.init({ duration: 1000, once: false });
   }, []);
 
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };

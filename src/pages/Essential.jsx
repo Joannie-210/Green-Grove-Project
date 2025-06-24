@@ -41,6 +41,10 @@ const scrollToTop = () => {
     });
   }
   
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
 const tools = [
   {
     name: "Hand Trowel",

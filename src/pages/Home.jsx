@@ -32,6 +32,11 @@ const scrollToTop = () => {
   })
 }
 
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
+
 const essentials = {
   Soil: {
     title: "Soil & Fertilizers",
