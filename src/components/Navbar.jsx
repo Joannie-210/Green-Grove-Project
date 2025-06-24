@@ -7,20 +7,15 @@ import clsx from 'clsx';
 
 const Navbar = () => {
 
-  // state
-  // 
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
   const [learnOpen, setLearnOpen] = useState(false);       
   const [visitCount, setVisitCount] = useState(0);
 
-  // ────────────────────────────────────────────────────────────────
-  // effects
-  // ────────────────────────────────────────────────────────────────
   useEffect(() => {
     const handleScroll = () =>
-      setScrolled(window.scrollY > window.innerHeight - 10);
+      setScrolled(window.scrollY > window.innerHeight - 5);
     window.addEventListener('scroll', handleScroll);
 
     const storedCount = localStorage.getItem('visitCount');
@@ -64,7 +59,7 @@ const Navbar = () => {
           />
         </NavLink>
 
-        <div className='w-25 flex justify-between items-center'>
+        <div className='w-25  flex justify-between items-center'>
            <span className="md:hidden text-[11px] flex gap-1 items-center">
             <UserRound size={14} /> {visitCount}{' '}
             {visitCount === 1 ? 'visit' : 'visits'}
@@ -85,13 +80,13 @@ const Navbar = () => {
        
         <ul
           className={clsx(
-            'md:flex absolute md:static top-full left-0 w-full md:w-auto bg-black md:bg-transparent text-white md:flex-row flex-col gap-6 px-6 py-4 md:py-0 md:gap-8 lg:gap-14 z-40 transition-all duration-300 ease-in-out',
+            ' md:flex absolute md:static top-full left-0 w-full md:w-auto bg-black md:bg-transparent text-white md:flex-row flex-col gap-6 px-6 py-4 md:py-0 md:gap-8 lg:gap-14 z-40 transition-all duration-300 ease-in-out',
             menuOpen
               ? 'opacity-100 visible'
               : 'opacity-0  invisible md:visible md:opacity-100'
           )}
         >
-          {/* About (first) */}
+         
           <li className="group relative text-center mb-3 hover:text-green-500">
             <NavLink to="/about" className={linkClasses}>
               {underlineSpan('About')}
@@ -123,7 +118,7 @@ const Navbar = () => {
                 productsOpen
                   ? 'max-h-96 opacity-100 visible'
                   : 'max-h-0 opacity-0 invisible',
-                'md:group-hover:max-h-96 md:group-hover:opacity-100 md:group-hover:visible md:group-hover:translate-y-1'
+                ' md:group-hover:max-h-96 md:group-hover:opacity-100 md:group-hover:visible md:group-hover:translate-y-1'
               )}
             >
               <li>
@@ -172,8 +167,6 @@ const Navbar = () => {
           </li>
 
           
-
-          {/* Learn and Explore dropdown */}
           <li className="relative group w-full md:w-auto">
             <div
               className="flex justify-center items-center gap-1 cursor-pointer text-white"
