@@ -11,6 +11,10 @@ const scrollToTop = () => {
   })
 }
 
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
 
   const [pots, setPots] = useState([]);
   const [loading, setLoading] = useState(true);

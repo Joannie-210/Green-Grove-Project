@@ -2,8 +2,15 @@ import React from 'react';
 import Swal from "sweetalert2";
 import Contacts from '../assets/download.jpeg';
 import Cimg from '../assets/cimg.jpg'
+import { useEffect } from 'react';
 
 const Contact = () => {
+
+  useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
+
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -53,7 +60,7 @@ const Contact = () => {
 
       
     <div className="lg:h-200 flex flex-col lg:flex-row justify-between lg:pt-15  items-start gap-10 min-w-full h-auto py-5 px-4 sm:px-10">
-  {/* Contact Info Section */}
+  
   <div className="hidden md:flex flex-col justify-start md:w-full  w-150 max-w-4xl rounded-lg">
 <h1 className="text-2xl w-full md:text-5xl  md:text-center lg:text-4xl  lg:text-left font-bold mt-5 mb-4">Drop the line, let's chat</h1>
     <h2 className="text-xl text-gray-600 mb-6">Don't hesitate to say a hello!</h2>
