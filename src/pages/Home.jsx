@@ -24,6 +24,8 @@ import Pack from '../assets/Pack.jpeg';
 import Comp from '../assets/comp.jpeg';
 import Can from '../assets/Can.jpeg';
 import Idea from '../assets/idea.jpeg';
+import Review from '../components/Review'
+
 
 const scrollToTop = () => {
   window.scrollTo({
@@ -480,7 +482,7 @@ const Home = () => {
 </section>
 
 
-{/* ───────────────── Pots & Containers ───────────────── */}
+
 <section className="w-full bg-green-700 py-20">
   <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-24">
    <div className="text-center mb-12" data-aos="fade-down">
@@ -524,7 +526,7 @@ const Home = () => {
 <section className="w-full bg-white py-20">
   <div className="max-w-7xl mx-auto md:px-16 lg:px-24">
    <div className="text-center mb-12" >
-        <h2 className="text-3xl font-bold text-green-800 mb-3">Accessories & Decoration Ideas</h2>
+        <h2 className="text-3xl lg:text-4xl font-bold text-green-800 mb-3">Accessories & Decoration Ideas</h2>
         <p className="text-gray-600">Elevate your garden space with thoughtful, aesthetic touches.</p>
       </div>
 
@@ -603,7 +605,7 @@ const Home = () => {
         />
         <div className="p-4">
           <h3 className="font-semibold text-green-700">{product.name}</h3>
-          <p className="text-sm text-gray-600">{product.desc}</p>
+          <p className="text-md text-gray-600">{product.desc}</p>
         </div>
       </a>
     ))}
@@ -619,7 +621,7 @@ const Home = () => {
     </Link>
   </div>
 </section>
-
+ <Review/>
 <section className="w-full bg-gray-50 py-20">
   <div className="max-w-7xl mx-auto px-6 md:px-16 lg:px-28">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
@@ -648,7 +650,7 @@ const Home = () => {
 
       <Link
         to ="/contact"
-        className="inline-block px-6 py-3 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors"
+        className="inline-block px-6 py-3 mt-5 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors"
       >
         Contact Us
       </Link>
@@ -661,6 +663,7 @@ const Home = () => {
       <i className="bi bi-arrow-up text-xl"></i>
 
      </button>
+    
     </>
   )
 }
