@@ -298,10 +298,14 @@ const Article = () => {
               </p>
               <a
                 href={article.link}
-                className="text-green-500 font-medium hover:underline"
+                className="text-green-500  font-medium hover:underline"
               >
                 View Content →
               </a>
+              <div className="w-full flex justify-between items-center h-14">
+                <button className="rounded-full py-1 px-7 cursor-pointer bg-green-500 text-white">Buy</button>
+                <button className="text-green-500 cursor-pointer">Borrow</button>
+              </div>
             </div>
           </div>
         ))}
