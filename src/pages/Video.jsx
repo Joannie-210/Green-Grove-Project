@@ -7,6 +7,9 @@ const Video = () => {
   window.scrollTo(0, 0);
 }, []);
 
+ const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const allVideos = [
     {
@@ -267,7 +270,14 @@ const Video = () => {
             Next 
           </button>
         </div>
+        
       </div>
+       <button
+        onClick={scrollToTop}
+        className="fixed cursor-pointer bottom-10 right-10 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition duration-300 w-[50px] h-[50px] flex items-center justify-center"
+      >
+        <i className="bi bi-arrow-up text-xl"></i>
+      </button>
     </>
   );
 };

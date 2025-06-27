@@ -191,7 +191,7 @@ const Home = () => {
     
   >
     <h1
-      className="text-2xl text-center w-full sm:text-3xl mb-6 md:text-4xl lg:text-5xl font-bold mb-4 lg:text-left"
+      className="text-2xl text-center w-full sm:text-3xl mb-6 md:text-4xl lg:text-5xl font-bold  lg:text-left"
       
     >
       Who We Are
@@ -516,7 +516,7 @@ const Home = () => {
           to ="/pots"
           className="inline-block px-6 py-4 bg-white text-green-500 rounded-full hover:translate-y-[-2.5px] hover:shadow-lg transition-colors"
         >
-          Read: Choosing the Right Container →
+          Choosing the Right Container →
         </Link>
       </div>
       </div>
@@ -552,7 +552,7 @@ const Home = () => {
 
       <div className="mt-12 text-center" data-aos="fade-up">
         <Link
-          href="/accessory"
+          to ="/accessory"
           className="inline-block px-6 py-3 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors"
         >
           More Garden Aesthetics →
@@ -644,7 +644,7 @@ const Home = () => {
       <h2 className="text-3xl font-bold text-green-800 mb-4">Contact Us</h2>
       <div className="text-gray-700 space-y-2 mb-6">
         <p><strong>Email:</strong> greengroves@gmail.com</p>
-        <p><strong>Phone:</strong> +234 800 000 0000</p>
+        <p><strong>Phone:</strong> +234 8132667897</p>
       </div>
 
 
