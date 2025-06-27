@@ -22,20 +22,20 @@ function App() {
 
   return (
     <>
-      <Router>
+    <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-   <Route path="/videos" element={<Video/>} />
-    <Route path="/accessory" element={<Accessory />} />
-     <Route path="/tips" element={<Tips />} />
-      <Route path="/essential" element={<Essential />} />
-       <Route path="/tools" element={<Tools />} />
-         <Route path="/contact" element={<Contact />} />
-           <Route path="/article" element={<Article />} />
-              <Route path="/pots" element={<Pots/>} />
-             <Route path="/recommendations" element={<Recs/>} />
+        <Route path="/videos" element={<Video/>} />
+        <Route path="/accessory" element={<Accessory />} />
+        <Route path="/tips" element={<Tips />} />
+        <Route path="/essential" element={<Essential />} />
+        <Route path="/tools" element={<Tools />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/article" element={<Article />} />
+        <Route path="/pots" element={<Pots/>} />
+        <Route path="/recommendations" element={<Recs/>} />
       </Routes>
     </Router>
       <Ticker/>

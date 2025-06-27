@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
-import aboutus from "../assets/aboutusimg.jpg";
+import about from "../assets/us.jpg";
+import aboutus from '../assets/aboutusimg.jpg'
 import garden from "../assets/garden.jpg";
 import boy from "../assets/boy1.png";
 import book from "../assets/open-book.png";
@@ -38,7 +39,7 @@ const About = () => {
     <div>
       <div
         className="relative bg-cover bg-center bg-fixed flex items-center justify-center rounded-bl-[60px] sm:rounded-bl-[100px] h-[60vh] sm:h-[80vh] lg:h-screen"
-        style={{ backgroundImage: `url(${aboutus})` }}
+        style={{ backgroundImage: `url(${about})` }}
         data-aos="fade-up"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/60 to-black/60 rounded-bl-[60px] sm:rounded-bl-[100px]"></div>

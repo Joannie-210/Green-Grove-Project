@@ -82,10 +82,10 @@ const ReviewSection = () => {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="bg-white rounded-xl py-8 shadow-xl w-[90%] max-w-lg relative"
+            className="bg-white rounded-md py-8 shadow-xl w-[90%] max-w-lg relative"
           >
             <button onClick={() => setShowModal(false)} className="absolute top-4 right-4">
-              <X className="w-5 h-5 cursor-pointer text-gray-500 hover:text-gray-700" />
+              <X className="w-5 h-5 cursor-pointer  rounded-full bg-gray-200 text-gray-500 hover:text-gray-700" />
             </button>
             <h3 className="text-2xl font-bold mb-2 text-center">Write a Review</h3>
             <form onSubmit={handleSubmit} className="grid gap-4">
@@ -94,21 +94,21 @@ const ReviewSection = () => {
                 placeholder="Your Name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="p-3 w-full rounded-md border"
+                className="p-3 w-full rounded-md border border-gray-300"
                 required
               />
               <textarea
                 placeholder="Your Review"
                 value={formData.text}
                 onChange={(e) => setFormData({ ...formData, text: e.target.value })}
-                className="p-3 rounded-md border"
+                className="p-3 rounded-md border border-gray-300"
                 rows={3}
                 required
               ></textarea>
               <select
                 value={formData.rating}
                 onChange={(e) => setFormData({ ...formData, rating: parseInt(e.target.value) })}
-                className="p-3 rounded-md border"
+                className="p-3 rounded-md border border-gray-300"
               >
                 {[5, 4, 3, 2, 1].map((num) => (
                   <option key={num} value={num}>{num} Star{num > 1 && 's'}</option>
@@ -116,7 +116,7 @@ const ReviewSection = () => {
               </select>
               <button
                 type="submit"
-                className="bg-green-500 mt-6 text-white py-2 rounded-full hover:bg-gray-800 transition"
+                className="bg-green-500 mt-6 text-white py-2 rounded-full cursor-pointer hover:bg-green-400 transition"
               >
                 Submit
               </button>

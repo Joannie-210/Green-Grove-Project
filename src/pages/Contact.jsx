@@ -3,6 +3,7 @@ import Swal from "sweetalert2";
 import Contacts from '../assets/download.jpeg';
 import Cimg from '../assets/cimg.jpg'
 import { useEffect } from 'react';
+import Map from '../components/Map.jsx'
 
 const Contact = () => {
 
@@ -62,14 +63,14 @@ const Contact = () => {
     <div className="lg:h-200 flex flex-col lg:flex-row justify-between lg:pt-15  items-start gap-10 min-w-full h-auto py-5 px-4 sm:px-10">
   
   <div className="hidden md:flex flex-col justify-start md:w-full  w-150 max-w-4xl rounded-lg">
-<h1 className="text-2xl w-full md:text-5xl  md:text-center lg:text-4xl  lg:text-left font-bold mt-5 mb-4">Drop the line, let's chat</h1>
+<h1 className="text-2xl w-full md:text-5xl  m lg:text-4xl  text-left font-bold mt-5 mb-4">Drop the line, let's chat</h1>
     <h2 className="text-xl text-gray-600 mb-6">Don't hesitate to say a hello!</h2>
 
     <div className="flex flex-col  items-center md:justify-between  md:flex-row lg:items-center lg:justify-between gap-6">
       <div className="flex flex-col text-black">
         <div className="mb-4">
           <h4 className="text-lg font-semibold">Phone</h4>
-          <p className="hover:underline cursor-pointer text-green-500">+235 8132667897</p>
+          <p className="hover:underline cursor-pointer text-green-500">+234 8132667897</p>
         </div>
         <div className="mb-4">
           <h4 className="text-lg font-semibold">Email</h4>
@@ -135,10 +136,13 @@ const Contact = () => {
 </div>
 
 </div>
-<button onClick={scrollToTop} className="fixed bottom-10 right-10 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition duration-300 w-[50px] h-[50px] flex items-center justify-center hover:cursor-pointer">
+<button onClick={scrollToTop} className="fixed z-50 bottom-10 right-10 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition duration-300 w-[50px] h-[50px] flex items-center justify-center hover:cursor-pointer">
       <i className="bi bi-arrow-up text-xl"></i>
 
      </button>
+     <h3 className='text-center text-3xl md:h-30 md:text-4xl  h-20 flex justify-center items-center text-green-700 font-bold'>Here marks our spot!</h3>
+     <Map/>
+     <div className='w-full h-10'></div>
     </div>
   );
 };
