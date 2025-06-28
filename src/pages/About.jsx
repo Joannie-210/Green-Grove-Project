@@ -2,24 +2,25 @@ import React, { useEffect } from "react";
 import "aos/dist/aos.css";
 import AOS from "aos";
 import about from "../assets/us.jpg";
-import aboutus from '../assets/aboutusimg.jpg'
+import aboutus from "../assets/aboutusimg.jpg";
 import garden from "../assets/garden.jpg";
 import boy from "../assets/boy1.png";
 import book from "../assets/open-book.png";
 import plant from "../assets/plant-under-sun.png";
 import earth from "../assets/earth-planet.png";
+import gerard from "../assets/gerard.jpg";
 import boy2 from "../assets/boy2.png";
 import girl from "../assets/girl1.png";
+import joanna from "../assets/joanna.jpg";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "@fontsource/jost";
 import CountUp from "react-countup";
 import { geolocation } from "./About";
 
 const About = () => {
-
   useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
+    window.scrollTo(0, 0);
+  }, []);
 
   useEffect(() => {
     AOS.init({
@@ -248,7 +249,6 @@ const About = () => {
       </div>
 
       <div className="pt-20 pb-20 px-6 sm:px-10 lg:px-[60px]">
- 
         <div className="text-center flex flex-col gap-4 items-center">
           <p className="text-green-700 font-bold text-2xl sm:text-3xl">
             Our Team
@@ -261,46 +261,77 @@ const About = () => {
           </h2>
         </div>
 
-      
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          
+        <div className="mt-16 mb-10 px-4 max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {[
-            { img: boy, name: "Gerard", delay: "0" },
-            { img: girl, name: "Joanna Enoch", delay: "150" },
-            { img: boy2, name: "Gaadi Tartor", delay: "200" },
+            {
+              img: gerard,
+              name: "Gerard",
+              delay: "0",
+              socials: {
+                facebook: "https://web.facebook.com/profile.php?id=1030928329",
+                github: "https://github.com/Gerardonyia",
+                instagram:
+                  "https://www.instagram.com/_._gerard?igsh=MWdpbGNibmlpYzRwNw==",
+              },
+            },
+            {
+              img: joanna,
+              name: "Joanna Enoch",
+              delay: "150",
+              socials: {
+                facebook:
+                  "https://web.facebook.com/profile.php?id=100093575492884",
+                github: "https://github.com/Joannie-210",
+                instagram: "https://www.instagram.com/joanna.bleeds.ink/",
+              },
+            },
+            {
+              img: boy2,
+              name: "Gaadi Tartor",
+              delay: "200",
+              socials: {
+                facebook:
+                  "https://www.facebook.com/profile.php?id=61565439414763",
+                github: "https://github.com/tartor0",
+                instagram: "https://www.instagram.com/tartorrg/",
+              },
+            },
           ].map((member, index) => (
             <div
               key={index}
-              className="relative group rounded-md w-full max-w-[320px] mx-auto"
+              className="relative group rounded-xl w-full max-w-[340px] mx-auto transition-transform duration-300 hover:scale-105"
               data-aos="fade-up"
               data-aos-delay={member.delay}
             >
               <div
-                className="bg-cover bg-center h-[450px] w-full  shadow-md rounded-md bg-gray-700"
+                className="bg-cover bg-center w-full aspect-[4/3] rounded-t-xl shadow-md"
                 style={{ backgroundImage: `url(${member.img})` }}
               ></div>
 
-              <div className="absolute bottom-0 left-0 w-[100%] sm:w-[100%]  rounded-b-md bg-white p-4  transform translate-x-0 transition duration-300 ease-in-out">
+              <div className="bg-white rounded-b-xl border border-gray-200 p-4">
                 <p className="font-semibold text-xl">{member.name}</p>
                 <p className="text-green-700">Garden Designer</p>
-                <div className="flex gap-3 mt-3">
-                  {["facebook", "twitter-x", "instagram"].map((icon, i) => (
-                    <div
-                      key={i}
-                      className="bg-green-200 w-10 h-10 rounded-full flex items-center justify-center"
-                    >
-                      <a href="#" className="text-green-700 text-xl">
-                        <i className={`bi bi-${icon}`}></i>
+                <div className="flex flex-wrap gap-3 mt-4">
+                  {["facebook", "instagram", "github"].map((platform, i) =>
+                    member.socials[platform] ? (
+                      <a
+                        key={i}
+                        href={member.socials[platform]}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-green-200 w-10 h-10 rounded-full flex items-center justify-center text-green-700 text-xl hover:bg-green-300 transition"
+                        aria-label={`${member.name}'s ${platform}`}
+                      >
+                        <i className={`bi bi-${platform}`}></i>
                       </a>
-                    </div>
-                  ))}
+                    ) : null
+                  )}
                 </div>
               </div>
             </div>
           ))}
         </div>
       </div>
-
       <button
         onClick={scrollToTop}
         className="fixed bottom-10 right-10 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition duration-300 w-[50px] h-[50px] flex items-center justify-center hover:cursor-pointer"
