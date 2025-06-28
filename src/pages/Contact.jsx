@@ -15,7 +15,7 @@ const Contact = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
-    formData.append("access_key", "14c20eca-62ff-4ad3-a54c-8e98eb8507c8");
+    formData.append("access_key", "a5fb17e4-7fcb-4f02-8e1b-5738291a4f9d");
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
@@ -74,7 +74,7 @@ const Contact = () => {
         </div>
         <div className="mb-4">
           <h4 className="text-lg font-semibold">Email</h4>
-          <p className="hover:underline cursor-pointer text-green-500">greengrove@gmail.com</p>
+          <p className="hover:underline cursor-pointer text-green-500">greengroves01@gmail.com</p>
         </div>
         <div className="mb-4">
           <h4 className="text-lg font-semibold">Office</h4>

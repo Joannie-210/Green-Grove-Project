@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, CheckCircle, Leaf } from "lucide-react";
 import Potss from "../assets/potss.jpeg";
+import AOS from "aos";
 
 export default function PotsShowcase() {
   const scrollToTop = () => {
@@ -71,7 +72,7 @@ export default function PotsShowcase() {
       {/* Hero Banner */}
       <div
         className="relative bg-cover bg-center bg-fixed flex items-center justify-center rounded-bl-[40px] sm:rounded-bl-[100px] h-[60vh] sm:h-[80vh] lg:h-screen"
-        style={{ backgroundImage: `url(${Potss})` }}
+        style={{ backgroundImage: `url(${Potss})` }} data-aos ="fade-up" data-aos-duration="1000"
       >
         <div className="absolute inset-0 bg-gradient-to-br from-black/60 to-black/60 rounded-bl-[40px] sm:rounded-bl-[100px]"></div>
         <div className="relative z-10 text-center px-4">
@@ -83,7 +84,7 @@ export default function PotsShowcase() {
 
       {/* Intro */}
       <header className="mb-10 text-center mt-20 space-y-4 px-4">
-        <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-green-700">
+        <h2 className="text-2xl sm:text-4xl font-semibold tracking-tight text-green-700">
           Find the Right Pot for Every Plant
         </h2>
         <p className="text-gray-700 max-w-2xl mx-auto text-md">

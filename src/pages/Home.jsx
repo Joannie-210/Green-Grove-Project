@@ -643,7 +643,7 @@ const Home = () => {
     <div>
       <h2 className="text-3xl font-bold text-green-800 mb-4">Contact Us</h2>
       <div className="text-gray-700 space-y-2 mb-6">
-        <p><strong>Email:</strong> greengroves@gmail.com</p>
+        <p><strong>Email:</strong> greengroves01@gmail.com</p>
         <p><strong>Phone:</strong> +234 8132667897</p>
       </div>
 
