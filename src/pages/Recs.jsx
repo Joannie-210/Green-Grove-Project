@@ -429,14 +429,14 @@ const About = () => {
       <section className="bg-gray-100 py-16 px-6 sm:px-12 lg:px-10">
         <div className="max-w-screen-xl mx-auto">
           <h2 className="text-4xl font-semibold text-center text-green-700 mb-8">
-            Product Suggestions
+            What We Recommend
           </h2>
 
-          <div className="flex justify-center mb-10">
+          <div className="flex justify-start mb-10">
             <select
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
-              className="bg-white border border-green-500 text-green-700 px-4 py-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400"
+              className="bg-white border px-4 py-2 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-green-400"
             >
               {categories.map((cat) => (
                 <option key={cat} value={cat}>

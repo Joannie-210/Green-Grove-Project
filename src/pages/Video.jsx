@@ -7,6 +7,9 @@ const Video = () => {
   window.scrollTo(0, 0);
 }, []);
 
+ const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const allVideos = [
     {
@@ -206,7 +209,7 @@ const Video = () => {
 
   return (
     <>
-      <div className="relative w-full min-h-screen md:h-[400px] lg:h-[500px] overflow-hidden">
+      <div className="relative w-full flex items-center min-h-screen md:h-[400px] lg:h-[500px] overflow-hidden">
         <video
           src={gardvid}
           autoPlay
@@ -215,11 +218,10 @@ const Video = () => {
           playsInline
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
         />
-        <div className="relative z-10 flex flex-col items-center justify-center w-full h-full px-4">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-center font-bold text-white">
+        <div className="relative z-10 flex justify-center items-center text-center w-full h-full px-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
             Watch, Learn, Grow!
           </h1>
-         
         </div>
       </div>
 
@@ -268,7 +270,14 @@ const Video = () => {
             Next 
           </button>
         </div>
+        
       </div>
+       <button
+        onClick={scrollToTop}
+        className="fixed cursor-pointer bottom-10 right-10 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition duration-300 w-[50px] h-[50px] flex items-center justify-center"
+      >
+        <i className="bi bi-arrow-up text-xl"></i>
+      </button>
     </>
   );
 };
