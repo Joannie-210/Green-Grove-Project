@@ -12,7 +12,7 @@ const Footer = () => {
    
     <div className="bg-[#FAF3E0] bg pt-10 w-full h-70">
     <footer className="bg-[#FAF3E0] text-gray-800 py-10">
-  <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+  <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-5">
     
     
     <div>
@@ -24,28 +24,38 @@ const Footer = () => {
     </div>
 
    
-    <div>
+    <div className='mb-7 md:mb-0'>
       <h3 className="text-lg font-semibold mb-2">Company</h3>
       <ul className="space-y-1 text-sm">
-        <li><a href="/about" className="hover:text-gray-500 underline">Who We Are</a></li>
-        <li><a href="/tips" className="hover:text-gray-500 underline">Tips</a></li>
-        <li><a href="/recommendations" className="hover:text-gray-500 underline">Suggestions</a></li>
+        <li><a href="/about" className="text-[13px] hover:text-green-500">Who We Are</a></li>
+        <li><a href="/tips" className="text-[13px] hover:text-green-500">Tips</a></li>
+        <li><a href="/recommendations" className="text-[13px] hover:text-green-500">Suggestions</a></li>
       </ul>
     </div>
 
-    
-    <div>
+       <div className='mb-7 sm:mb-0'>
+      <h3 className="text-lg font-semibold mb-2">Resources</h3>
+      <ul className="space-y-1 text-sm">
+        <li><a href="/tools" className="text-[13px] hover:text-green-500">Gardening Tools</a></li>
+        <li><a href="/accessory" className="text-[13px] hover:text-green-500">Gardening Accessories</a></li>
+         <li><a href="/essential" className="text-[13px] hover:text-green-500">Gardening Essentials</a></li>
+        <li><a href="/tips" className="text-[13px] hover:text-green-500">Gardening Tips</a></li>
+       <li><a href="/pots" className="text-[13px] hover:text-green-500">Pots & Containers</a></li>
+      </ul>
+    </div>
+
+    <div className='mb-7 md:mb-0'>
       <h3 className="text-lg font-semibold mb-2">Explore</h3>
       <ul className="space-y-1 text-sm">
-        <li><a href="/videos" className="hover:text-gray-500 underline">Videos</a></li>
-        <li><a href="/article" className="hover:text-gray-500 underline">Articles</a></li>
+        <li><a href="/videos" className="text-[13px] hover:text-green-500">Videos</a></li>
+        <li><a href="/article" className="text-[13px] hover:text-green-500">Articles</a></li>
       </ul>
     </div>
 
-    <div>
+    <div className='mb-7 md:mb-0'>
       <h3 className="text-lg font-semibold mb-2">Connect</h3>
       <ul className="space-y-1 text-sm">
-        <li><a href="/contact" className="hover:text-gray-500 underline">Email Us</a></li>
+        <li><a href="/contact" className="text-[13px] hover:text-green-500">Email Us</a></li>
       </ul>
     </div>
 
