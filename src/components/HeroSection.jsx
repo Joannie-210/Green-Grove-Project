@@ -1,5 +1,6 @@
 import React from 'react';
 import Background from '../assets/back.jpeg';
+import {Link} from 'react-router-dom';
 import Button from './Button';
 import { ArrowUpRight } from 'lucide-react';
 import Back from '../assets/back.jpeg';
@@ -30,8 +31,10 @@ const HeroSection = () => {
             variant="primary"
             onClick={() => window.location.href = '/about'}
           />
-          <button className="bg-white w-10 h-10 text-black flex justify-center items-center rounded-full">
+          <button  className="bg-white hover:opacity-75 w-10 h-10 text-black flex justify-center items-center rounded-full">
+            <Link to = "/contact" className="text-black">
             <ArrowUpRight />
+            </Link>
           </button>
         </div>
       </div>
