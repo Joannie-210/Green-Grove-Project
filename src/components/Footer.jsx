@@ -27,28 +27,25 @@ const Footer = () => {
     <div>
       <h3 className="text-lg font-semibold mb-2">Company</h3>
       <ul className="space-y-1 text-sm">
-        <li><a href="#" className="hover:text-gray-500">About</a></li>
-        <li><a href="#" className="hover:text-gray-500">Careers</a></li>
-        <li><a href="#" className="hover:text-gray-500">Blog</a></li>
+        <li><a href="/about" className="hover:text-gray-500 underline">Who We Are</a></li>
+        <li><a href="/tips" className="hover:text-gray-500 underline">Tips</a></li>
+        <li><a href="/recommendations" className="hover:text-gray-500 underline">Suggestions</a></li>
       </ul>
     </div>
 
     
     <div>
-      <h3 className="text-lg font-semibold mb-2">Support</h3>
+      <h3 className="text-lg font-semibold mb-2">Explore</h3>
       <ul className="space-y-1 text-sm">
-        <li><a href="#" className="hover:text-gray-500">Help Center</a></li>
-        <li><a href="#" className="hover:text-gray-500">Privacy Policy</a></li>
-        <li><a href="#" className="hover:text-gray-500">Terms of Service</a></li>
+        <li><a href="/videos" className="hover:text-gray-500 underline">Videos</a></li>
+        <li><a href="/article" className="hover:text-gray-500 underline">Articles</a></li>
       </ul>
     </div>
 
     <div>
       <h3 className="text-lg font-semibold mb-2">Connect</h3>
       <ul className="space-y-1 text-sm">
-        <li><a href="#" className="hover:text-gray-500">Email us</a></li>
-        <li><a href="#" className="hover:text-gray-500">Instagram</a></li>
-        <li><a href="#" className="hover:text-gray-500">LinkedIn</a></li>
+        <li><a href="/contact" className="hover:text-gray-500 underline">Email Us</a></li>
       </ul>
     </div>
 
