@@ -250,12 +250,11 @@ const Accessory = () => {
         <p className="text-gray-700 max-w-xl mx-auto mb-8">
           Explore our curated catalog for hand‑picked items that ship straight to your door.
         </p>
-        <a
-          href="/products"
+        <button
           className="inline-block bg-green-500 text-white px-8 py-3 rounded-full hover:bg-green-600 transition"
         >
           Shop Accessories
-        </a>
+        </button>
       </section>
 
      
